@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GitHub Copilot 101 for new Hubbers, presented by Marta Lacasta on 25 August 2026.">
+    <meta name="theme-color" content="#050c05">
+    <title>GitHub Copilot 101 | Marta Lacasta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#slide-1">Skip to presentation</a>
+
+    <header class="deck-header" aria-label="Presentation status">
+      <a class="brand" href="#slide-1" aria-label="GitHub Copilot 101, first slide">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.6a9.4 9.4 0 0 0-3 18.3c.5.1.6-.2.6-.5v-1.8c-2.7.6-3.3-1.1-3.3-1.1-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.2-4.5-1.1-4.5-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.5 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.2 2.6-1 2.6-1 .5 1.2.2 2.2.1 2.5.6.7 1 1.5 1 2.5 0 3.6-2.2 4.5-4.5 4.7.4.3.7.9.7 1.8v2.6c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.6Z"/>
+        </svg>
+        <span>Copilot 101</span>
+      </a>
+      <div class="header-meta">
+        <span class="snapshot">Snapshot: 18 Aug 2026</span>
+        <span class="slide-count" aria-live="polite"><span id="current-slide">1</span> / 16</span>
+      </div>
+    </header>
+
+    <main id="deck" class="deck" aria-label="GitHub Copilot 101 slide deck">
+      <section class="slide cover-slide is-active" id="slide-1" data-title="Cover" data-duration="1 min" tabindex="-1" aria-labelledby="slide-1-title">
+        <div class="slide-inner cover-layout">
+          <div class="eyebrow"><span class="pulse-dot"></span> New Hubber session</div>
+          <div>
+            <p class="terminal-kicker" aria-hidden="true">$ gh copilot learn --level=101</p>
+            <h1 id="slide-1-title">GitHub<br><span class="gradient-text">Copilot 101</span></h1>
+            <p class="hero-subtitle">From helpful suggestions to agentic workflows - <strong>with you in control.</strong></p>
+          </div>
+          <div class="cover-footer">
+            <div>
+              <p class="presenter-name">Marta Lacasta</p>
+              <p>Tuesday, 25 August 2026</p>
+            </div>
+            <div class="cover-chip">45 minutes</div>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1 minute</strong>
+          <p>Welcome everyone. This is a practical orientation, not a feature inventory. The goal is to leave with a mental model, a repeatable control loop, and enough confidence to choose the right Copilot workflow for a task.</p>
+          <p>Set the theme early: Copilot can suggest, plan, and act, but the human remains accountable for intent, judgment, and the final result.</p>
+        </aside>
+      </section>
+
+      <section class="slide stats-slide" id="slide-2" data-title="Copilot at scale" data-duration="1 min" tabindex="-1" aria-labelledby="slide-2-title">
+        <div class="slide-inner">
+          <div class="section-label">01 / Why this matters</div>
+          <h2 id="slide-2-title">Copilot is already part of how software gets built.</h2>
+          <div class="stats-grid" role="list" aria-label="GitHub Copilot adoption and research figures">
+            <article role="listitem"><strong>20M+</strong><span>developers</span><p>Across IDEs, command line, and pull requests.</p></article>
+            <article role="listitem"><strong>77K</strong><span>enterprises</span><p>Using Copilot at the time of the 2025 report.</p></article>
+            <article role="listitem"><strong>55.8%</strong><span>faster</span><p>On one controlled JavaScript task; results vary by context.</p></article>
+          </div>
+          <p class="source-note">Sources: <a href="https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/">GitHub, 2025</a> and <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-ai-on-developer-productivity-evidence-from-github-copilot/">Microsoft Research, 2023</a>.</p>
+          <div class="run-strip" aria-label="Run of show"><span><b>25</b> learn</span><span><b>12</b> demo</span><span><b>8</b> Q&amp;A + buffer</span></div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1 minute</strong>
+          <p>Open with scale, then add the research caveat. Twenty million plus users and 77,000 enterprises were publicly reported in 2025. The 55.8% figure comes from a controlled JavaScript task, not a universal promise of productivity.</p>
+          <p>Set the run of show: 25 minutes to understand and apply, 12 minutes for the demo, and 8 minutes for first-week habits, questions, and buffer. Questions are welcome throughout; park deep detours.</p>
+        </aside>
+      </section>
+
+      <section class="slide history-slide" id="slide-3" data-title="Copilot evolution" data-duration="3 min" tabindex="-1" aria-labelledby="slide-3-title">
+        <div class="slide-inner">
+          <div class="section-label">02 / A short history</div>
+          <h2 id="slide-3-title">From completion to collaboration.</h2>
+          <ol class="history-line" aria-label="GitHub Copilot product evolution">
+            <li><time datetime="2021">2021</time><strong>Preview</strong><p>AI pair programmer and code completion.</p></li>
+            <li><time datetime="2022">2022</time><strong>GA</strong><p>Copilot opens to individual developers.</p></li>
+            <li><time datetime="2023">2023</time><strong>Chat</strong><p>Conversation joins the coding flow.</p></li>
+            <li><time datetime="2024">2024</time><strong>Choice</strong><p>More models, context, and customization.</p></li>
+            <li><time datetime="2025">2025</time><strong>Agents</strong><p>Local agent mode and cloud delegation.</p></li>
+            <li><time datetime="2026">2026</time><strong>Workflows</strong><p>Parallel sessions, plugins, and cross-surface continuity.</p></li>
+          </ol>
+          <p class="history-summary">The shift: <strong>predict the next line</strong> -&gt; <strong>help complete the task</strong>.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 3 minutes</strong>
+          <p>Copilot launched in technical preview in 2021 and became generally available in 2022. Chat added conversation; model choice and customization expanded the platform; agent mode and coding agent moved from suggestions to multi-step work.</p>
+          <p>By the August 2026 snapshot, the important story is workflow continuity: multiple sessions, reusable plugins, and movement across terminal, GitHub.com, mobile, and the Copilot app. The product changed; the human accountability did not.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-4" data-title="Mental model" data-duration="2 min" tabindex="-1" aria-labelledby="slide-4-title">
+        <div class="slide-inner">
+          <div class="section-label">03 / What it is</div>
+          <h2 id="slide-4-title">Assistant + agent + platform.</h2>
+          <div class="triad-grid">
+            <article class="feature-card"><span class="card-number">01</span><h3>Assistant</h3><p>Suggests, explains, transforms, and keeps you in flow.</p><span class="card-tag">Foreground</span></article>
+            <article class="feature-card"><span class="card-number">02</span><h3>Agent</h3><p>Plans, edits, runs tools, and iterates toward an outcome.</p><span class="card-tag">Action</span></article>
+            <article class="feature-card"><span class="card-number">03</span><h3>Platform</h3><p>Connects models, context, tools, policies, and workflows.</p><span class="card-tag">Extensible</span></article>
+          </div>
+          <div class="ownership-line"><span>Copilot proposes</span><span class="arrow">-&gt;</span><strong>You own intent, judgment, and the final result.</strong></div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Use all three frames. Completion and chat are assistant interactions. Agent workflows can take actions. The platform connects context, models, tools, customization, and governance.</p>
+          <p>The accountability line does not move as autonomy increases. The human defines the goal, decides what evidence is sufficient, and accepts or rejects the result.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-5" data-title="Autonomy ladder" data-duration="3 min" tabindex="-1" aria-labelledby="slide-5-title">
+        <div class="slide-inner">
+          <div class="section-label">04 / Choose the mode</div>
+          <h2 id="slide-5-title">Climb only as high as the task needs.</h2>
+          <ol class="ladder" aria-label="Copilot autonomy ladder">
+            <li><span class="ladder-step">1</span><div><strong>Complete</strong><small>Predict the next code or edit</small></div></li>
+            <li><span class="ladder-step">2</span><div><strong>Ask</strong><small>Explain, compare, locate, draft</small></div></li>
+            <li><span class="ladder-step">3</span><div><strong>Plan</strong><small>Explore and propose before editing</small></div></li>
+            <li><span class="ladder-step">4</span><div><strong>Agent</strong><small>Edit, run, verify, iterate locally</small></div></li>
+            <li><span class="ladder-step">5</span><div><strong>Cloud agent</strong><small>Work asynchronously on an isolated branch</small></div></li>
+          </ol>
+          <p class="rule-banner">Rule: <strong>use the least autonomy that solves the task.</strong></p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 3 minutes</strong>
+          <p>Completion fits a change you already understand. Ask is strong for learning. Plan is valuable when scope is uncertain. Agent mode fits an approved implementation. The cloud agent fits bounded asynchronous work reviewed through a branch or pull request.</p>
+          <p>More autonomy is not automatically better. It increases the value of explicit constraints, acceptance criteria, and verification.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-6" data-title="Surfaces" data-duration="2 min" tabindex="-1" aria-labelledby="slide-6-title">
+        <div class="slide-inner">
+          <div class="section-label">05 / Where it lives</div>
+          <h2 id="slide-6-title">One Copilot. Many working surfaces.</h2>
+          <div class="surface-map">
+            <article><div class="surface-icon" aria-hidden="true">&lt;/&gt;</div><h3>IDE</h3><p>Complete, ask, plan, agent</p></article>
+            <article><div class="surface-icon" aria-hidden="true">GH</div><h3>GitHub.com</h3><p>Chat, review, issues, cloud agent</p></article>
+            <article><div class="surface-icon" aria-hidden="true">&gt;_</div><h3>CLI</h3><p>Repository work in the terminal</p></article>
+            <article><div class="surface-icon" aria-hidden="true">[]</div><h3>App + mobile</h3><p>Sessions, handoff, work on the go</p></article>
+          </div>
+          <p class="fine-print">Availability varies by plan, policy, client, and rollout. Check the current feature matrix.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Choose the surface that matches the work: IDE for tight code loops, CLI for terminal-native work, GitHub.com for issues and pull requests, and app or mobile for managing and continuing sessions.</p>
+          <p>Do not promise identical availability. Plans, organization policy, client versions, and staged rollouts all matter.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-7" data-title="Prompting for value" data-duration="2 min" tabindex="-1" aria-labelledby="slide-7-title">
+        <div class="slide-inner">
+          <div class="section-label">06 / Get better results</div>
+          <h2 id="slide-7-title">Specific does not mean long. It means testable.</h2>
+          <div class="equation" aria-label="Context plus intent plus constraints plus feedback">
+            <span>Context</span><b>+</b><span>Intent</span><b>+</b><span>Constraints</span><b>+</b><span>Feedback</span>
+          </div>
+          <div class="prompt-pattern"><div class="prompt-label">Reusable prompt pattern</div><code>Inspect <mark>[scope]</mark>. Produce <mark>[outcome]</mark>. Preserve <mark>[constraints]</mark>. Verify with <mark>[checks]</mark>.</code></div>
+          <div class="prompt-compare">
+            <p><span>Vague</span> "Add CSV export."</p>
+            <p><span>Bounded</span> Add <code>--format csv</code>; preserve JSON default and API; no dependency; RFC 4180 edge tests; run targeted checks; summarize risks.</p>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>A prompt is a lightweight specification plus a feedback loop. Context narrows what matters, intent defines the result, constraints preserve behavior, and feedback helps the next iteration converge.</p>
+          <p>Contrast the vague request with a bounded one. The second prompt gives Copilot a finish line and gives the human a review checklist.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-8" data-title="Local vs cloud agent" data-duration="2 min" tabindex="-1" aria-labelledby="slide-8-title">
+        <div class="slide-inner">
+          <div class="section-label">07 / Delegation</div>
+          <h2 id="slide-8-title">Pair in the foreground. Delegate in the background.</h2>
+          <div class="versus-grid">
+            <article class="versus-card local">
+              <div class="versus-label">Local agent</div>
+              <h3>Fast feedback, shared attention</h3>
+              <ul>
+                <li>You watch the work unfold</li>
+                <li>Approvals happen in context</li>
+                <li>Best for exploration and tight iteration</li>
+              </ul>
+              <span class="fit-pill">Foreground pairing</span>
+            </article>
+            <div class="versus-divider" aria-hidden="true">VS</div>
+            <article class="versus-card cloud">
+              <div class="versus-label">Copilot cloud agent</div>
+              <h3>Bounded work, asynchronous review</h3>
+              <ul>
+                <li>Works on an isolated branch</li>
+                <li>You review evidence and diff later</li>
+                <li>Best for clear, testable outcomes</li>
+              </ul>
+              <span class="fit-pill">Background delegation</span>
+            </article>
+          </div>
+          <p class="sweet-spot"><span>Sweet spot</span> Bounded work + good tests + clear acceptance criteria</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Local and cloud agents are complementary. Stay local when learning the code, making frequent decisions, or handling an uncertain task. Delegate when the objective is bounded and the repository can provide fast evidence through tests and checks.</p>
+          <p>An isolated branch reduces collision; it does not remove the need to review. Branch protections, required checks, and human approval remain part of the workflow.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-9" data-title="Cloud agent workflow" data-duration="2 min" tabindex="-1" aria-labelledby="slide-9-title">
+        <div class="slide-inner">
+          <div class="section-label">08 / Delegate safely</div>
+          <h2 id="slide-9-title">An issue becomes a reviewable branch.</h2>
+          <ol class="agent-pipeline" aria-label="Copilot cloud agent workflow">
+            <li><span>01</span><strong>Assign</strong><p>Give a bounded issue or task.</p></li>
+            <li><span>02</span><strong>Work</strong><p>Agent uses an isolated environment and branch.</p></li>
+            <li><span>03</span><strong>Verify</strong><p>Tests and checks create evidence.</p></li>
+            <li><span>04</span><strong>Review</strong><p>You inspect the diff and iterate.</p></li>
+            <li><span>05</span><strong>Merge</strong><p>Your protections and approvals still apply.</p></li>
+          </ol>
+          <p class="sweet-spot"><span>Sweet spot</span> Bounded work + good tests + clear acceptance criteria</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>The cloud agent can research, plan, change code on an isolated branch, and open a pull request. It is strongest when the task is bounded and the repository has fast feedback.</p>
+          <p>Isolation reduces collision; it does not make the result correct. Branch protection, required checks, approvals, and human review remain part of the workflow.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-10" data-title="Customization" data-duration="2 min" tabindex="-1" aria-labelledby="slide-10-title">
+        <div class="slide-inner">
+          <div class="section-label">09 / Customization</div>
+          <h2 id="slide-10-title">Make the right context reusable.</h2>
+          <div class="custom-stack">
+            <article class="custom-row recommended"><span class="custom-index">Start</span><div><h3>Repository instructions</h3><p><code>.github/copilot-instructions.md</code> or <code>AGENTS.md</code></p></div><span class="status-chip">Highest leverage</span></article>
+            <article class="custom-row"><span class="custom-index">Repeat</span><div><h3>Prompt files</h3><p>Save a task shape or team workflow.</p></div></article>
+            <article class="custom-row"><span class="custom-index">Extend</span><div><h3>Skills, Agent Plugins, and MCP</h3><p>Package expertise and connect approved tools.</p></div></article>
+            <article class="custom-row preview"><span class="custom-index">Preview</span><div><h3>Memory</h3><p>Personalized context; behavior and availability can change.</p></div><span class="status-chip preview-chip">Preview</span></article>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Start with repository instructions because they scale to everyone working in the repository. Capture commands, boundaries, conventions, and what done means.</p>
+          <p>Prompt files make recurring tasks reusable. Agent Plugins 1.0 can package skills and MCP servers for compatible clients. Memory remains preview as of the snapshot date.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-11" data-title="Quality and code review" data-duration="2 min" tabindex="-1" aria-labelledby="slide-11-title">
+        <div class="slide-inner">
+          <div class="section-label">10 / Quality + review</div>
+          <h2 id="slide-11-title">Copilot proposes. Evidence decides.</h2>
+          <div class="loop" aria-label="Scope, generate, verify, review, iterate quality loop">
+            <div class="loop-step"><span>1</span><strong>Scope</strong><small>Bound the task</small></div>
+            <div class="loop-arrow" aria-hidden="true">-&gt;</div>
+            <div class="loop-step"><span>2</span><strong>Generate</strong><small>Draft or edit</small></div>
+            <div class="loop-arrow" aria-hidden="true">-&gt;</div>
+            <div class="loop-step active"><span>3</span><strong>Verify</strong><small>Run checks</small></div>
+            <div class="loop-arrow" aria-hidden="true">-&gt;</div>
+            <div class="loop-step"><span>4</span><strong>Review</strong><small>Inspect the diff</small></div>
+            <div class="loop-arrow" aria-hidden="true">-&gt;</div>
+            <div class="loop-step"><span>5</span><strong>Iterate</strong><small>Correct course</small></div>
+          </div>
+          <div class="evidence-grid">
+            <span>Tests</span><span>Types</span><span>Lint</span><span>Runtime</span><span>Diff</span><span>Domain review</span>
+          </div>
+          <p class="review-update"><strong>New:</strong> Copilot code review Lite and Balanced effort levels are generally available.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Generation is only one step. Verification should use the smallest relevant check first, then broaden if risk warrants it. Review the actual diff, not just the agent's summary.</p>
+          <p>Code review now offers generally available Lite and Balanced effort levels. Match review depth to change risk, then validate each finding yourself. A passing suite does not prove the requirement is right.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-12" data-title="Trust and governance" data-duration="2 min" tabindex="-1" aria-labelledby="slide-12-title">
+        <div class="slide-inner">
+          <div class="section-label">11 / Trust + governance</div>
+          <h2 id="slide-12-title">Guardrails are shared infrastructure.</h2>
+          <div class="governance-grid">
+            <article>
+              <div class="governance-heading"><span class="shield" aria-hidden="true"></span><h3>Organization controls</h3></div>
+              <ul>
+                <li>Policy and feature settings</li>
+                <li>Content exclusion</li>
+                <li>Public code matching controls</li>
+                <li>Audit and usage visibility</li>
+                <li>Approval boundaries</li>
+              </ul>
+            </article>
+            <article>
+              <div class="governance-heading"><span class="person" aria-hidden="true"></span><h3>Your responsibilities</h3></div>
+              <ul>
+                <li>Never paste secrets</li>
+                <li>Inspect references and provenance</li>
+                <li>Review commands before approval</li>
+                <li>Validate output for the real context</li>
+                <li>Escalate policy questions</li>
+              </ul>
+            </article>
+          </div>
+          <p class="caution-strip">Avoid absolutes about what Copilot can see, retain, or access. The answer depends on feature, configuration, and policy.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Trust is not one setting. It is a system of product controls, organization policy, repository protections, and user behavior. Mention content exclusion, public code matching, audit and usage visibility, and approvals without implying every control applies identically to every feature.</p>
+          <p>User responsibilities remain: do not submit secrets, inspect referenced material, review tool calls and commands, and validate the result in its deployment context. Point policy-specific questions to the appropriate internal owner or current official documentation.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-13" data-title="Current snapshot" data-duration="1 min" tabindex="-1" aria-labelledby="slide-13-title">
+        <div class="slide-inner">
+          <div class="section-label">12 / Current snapshot</div>
+          <h2 id="slide-13-title">What changed recently.</h2>
+          <div class="release-list">
+            <article><time datetime="2026-08">Now</time><div><h3>Copilot app supports parallel sessions</h3><p>Manage agent-driven work across repositories.</p></div></article>
+            <article><time datetime="2026-08">Now</time><div><h3>CLI sessions can continue across surfaces</h3><p>Start in the terminal, continue on GitHub.com or mobile.</p></div></article>
+            <article><time datetime="2026-08-07">GA</time><div><h3>Code review Lite + Balanced effort</h3><p>Choose review depth to match complexity and risk.</p></div></article>
+            <article><time datetime="2026-08-12">1.0</time><div><h3>Agent Plugins across VS Code, CLI, and app</h3><p>Package skills and MCP servers once for compatible clients.</p></div></article>
+            <article class="preview-release"><time datetime="2026-08">Preview</time><div><h3>Memory remains in preview</h3><p>Treat behavior and availability as subject to change.</p></div></article>
+          </div>
+          <p class="fine-print">Models change too quickly for a static catalog. Check the current docs and changelog.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1 minute</strong>
+          <p>This is a dated snapshot, not a promise. Highlight the workflow changes: parallel app sessions, cross-surface CLI continuity, generally available Lite and Balanced code review effort, and Agent Plugins 1.0 support across compatible Copilot clients.</p>
+          <p>Memory remains preview. Model names, availability, and defaults change too quickly for a useful static list, so point people to the feature matrix and changelog.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-14" data-title="Live demo" data-duration="12 min" tabindex="-1" aria-labelledby="slide-14-title">
+        <div class="slide-inner">
+          <div class="section-label">13 / Live demo</div>
+          <h2 id="slide-14-title">Show the control loop, not a magic trick.</h2>
+          <div class="demo-timer-grid">
+            <article>
+              <div class="demo-time">2:00</div>
+              <h3>Ask</h3>
+              <p>"Explain report flow, find tests, recommend safest files. Cite paths."</p>
+            </article>
+            <article>
+              <div class="demo-time">2:00</div>
+              <h3>Plan</h3>
+              <p>"Plan CSV; preserve JSON; no dependency; RFC 4180; edge tests. Wait."</p>
+            </article>
+            <article class="primary-demo">
+              <div class="demo-time">5:00</div>
+              <h3>Agent</h3>
+              <p>"Implement approved plan. Targeted tests first, then smallest broader check."</p>
+            </article>
+            <article>
+              <div class="demo-time">2:00</div>
+              <h3>Review</h3>
+              <p>"Review current diff. Rank findings. Do not edit yet."</p>
+            </article>
+          </div>
+          <div class="backup-banner"><strong>Backup ready:</strong> before/after branch or 60-90 second recording. Never debug live.</div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 12 minutes</strong>
+          <p><strong>Setup - 1 minute:</strong> Tiny CLI repo, fast tests, report command defaults to JSON. We add CSV without breaking the contract.</p>
+          <p><strong>Ask - 2 minutes:</strong> "I'm a new contributor. Explain the command flow for reports, identify tests, and recommend the safest files for adding another output format. Cite files."</p>
+          <p><strong>Plan - 2 minutes:</strong> Ask for <code>--format csv</code>, JSON default preserved, no dependency, RFC 4180 quoting, edge-case tests, API compatibility, and approval before edits.</p>
+          <p><strong>Agent - 5 minutes:</strong> Approve the plan. Ask for targeted tests first, the smallest broader check, and a summary of changed files, evidence, and risks.</p>
+          <p><strong>Review - 2 minutes:</strong> Ask Copilot to review only the current diff for correctness, RFC 4180 edge cases, backward compatibility, and security; rank findings and do not edit yet.</p>
+          <p>If the environment, network, or model stalls, switch immediately to the prepared branch or short recording. Narrate the same control loop. Do not troubleshoot in front of the room.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-15" data-title="First-week habits" data-duration="2 min" tabindex="-1" aria-labelledby="slide-15-title">
+        <div class="slide-inner">
+          <div class="section-label">14 / Start small</div>
+          <h2 id="slide-15-title">Five habits for your first week.</h2>
+          <ol class="habit-list">
+            <li><span>01</span><p><strong>Orient</strong> in one unfamiliar repository.</p></li>
+            <li><span>02</span><p>Use <strong>Plan</strong> once before editing.</p></li>
+            <li><span>03</span><p>Add one useful <strong>repository instruction</strong>.</p></li>
+            <li><span>04</span><p>Request one Copilot <strong>review</strong> - then challenge it.</p></li>
+            <li><span>05</span><p>Share one workflow that <strong>actually helped</strong>.</p></li>
+          </ol>
+          <p class="callout subtle">Build judgment through small, observable loops.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Make adoption concrete and low pressure. The goal is not maximum Copilot usage. It is learning where it helps, how to constrain it, and how to evaluate its work.</p>
+          <p>Challenge a review suggestion on purpose: ask for evidence, inspect the cited code, and decide whether the finding matters. Share useful workflows so team practice compounds.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-16" data-title="Q&A and resources" data-duration="6 min" tabindex="-1" aria-labelledby="slide-16-title">
+        <div class="slide-inner resources-slide">
+          <div class="section-label">15 / Q&amp;A</div>
+          <div class="resources-layout">
+            <div>
+              <h2 id="slide-16-title">What would you like Copilot to help with first?</h2>
+              <p class="resource-intro">Start with a real task. Choose the smallest useful loop. Keep the evidence visible.</p>
+              <div class="resource-links" aria-label="Official resources">
+                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md">New Hubber Copilot 101</a>
+                <a href="https://andreagriffiths11.github.io/copilot-101-deck/">Reference deck</a>
+                <a href="https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/">Copilot at scale</a>
+                <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-ai-on-developer-productivity-evidence-from-github-copilot/">Productivity study</a>
+                <a href="https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/">2021 launch</a>
+                <a href="https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/">2022 GA</a>
+                <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/features">Copilot features</a>
+                <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/chat-with-copilot/chat-in-ide">Chat in your IDE</a>
+                <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/copilot-feature-matrix">Feature matrix</a>
+                <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/responsible-use/chat">Responsible use</a>
+                <a href="https://github.blog/changelog/label/copilot/">Copilot changelog</a>
+                <a href="https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app">Agent Plugins 1.0</a>
+                <a href="https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available">Review effort levels</a>
+                <a href="https://github.com/trust-center">GitHub Trust Center</a>
+              </div>
+            </div>
+            <div class="closing-mark" aria-hidden="true">
+              <span class="orbit orbit-one"></span>
+              <span class="orbit orbit-two"></span>
+              <span class="core">YOU</span>
+            </div>
+          </div>
+          <div class="closing-footer">
+            <p><strong>Thank you.</strong> Marta Lacasta</p>
+            <p>martalacasta.github.io/copilot-101-marta</p>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 6 minutes</strong>
+          <p>Open with the framing question on the slide. Seed the room if needed: Where would you choose Plan instead of Agent? What evidence would you require before merging agent-generated work? Which repository instruction would save your team the most repeated context?</p>
+          <p>Use any remaining time for parked questions. For feature availability, policy, privacy, or model questions, anchor the answer to the snapshot date and point to current official documentation rather than making a static promise.</p>
+        </aside>
+      </section>
+    </main>
+
+    <nav class="deck-controls" aria-label="Slide controls">
+      <button id="prev-slide" class="control-button" type="button" aria-label="Previous slide">
+        <span aria-hidden="true">&larr;</span>
+      </button>
+      <div id="slide-dots" class="slide-dots" aria-label="Choose slide"></div>
+      <button id="notes-toggle" class="control-button notes-button" type="button" aria-label="Show speaker notes" aria-pressed="false">
+        <span aria-hidden="true">N</span><span class="control-label">Notes</span>
+      </button>
+      <button id="next-slide" class="control-button" type="button" aria-label="Next slide">
+        <span aria-hidden="true">&rarr;</span>
+      </button>
+    </nav>
+
+    <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+    <div id="shortcut-hint" class="shortcut-hint">Use arrow keys or Space to navigate. Press N for notes.</div>
+    <div id="live-announcer" class="sr-only" aria-live="polite"></div>
+    <noscript><p class="noscript-message">JavaScript is disabled. All slides are shown in document order.</p></noscript>
+  </body>
+</html>
