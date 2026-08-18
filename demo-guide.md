@@ -1,6 +1,6 @@
 # GitHub Copilot 101 demo guide
 
-**Presenter:** Marta La Casta<br>
+**Presenter:** Marta Lacasta<br>
 **Session:** Tuesday, 25 August 2026<br>
 **Feature snapshot:** 18 August 2026
 **Demo allocation:** 12 minutes total: 1 minute setup plus 11 minutes live
@@ -211,6 +211,10 @@ For availability, privacy, retention, policy, and model questions, avoid absolut
 
 - [New Hubber Copilot 101](https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md)
 - [Reference Copilot 101 deck](https://andreagriffiths11.github.io/copilot-101-deck/)
+- [GitHub Copilot at scale: 20M+ users across 77,000 enterprises](https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/)
+- [Microsoft Research controlled productivity study](https://www.microsoft.com/en-us/research/publication/the-impact-of-ai-on-developer-productivity-evidence-from-github-copilot/)
+- [Introducing GitHub Copilot in 2021](https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/)
+- [GitHub Copilot general availability in 2022](https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/)
 - [GitHub Copilot features](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/features)
 - [Using GitHub Copilot Chat in your IDE](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/chat-with-copilot/chat-in-ide)
 - [Responsible use of GitHub Copilot Chat](https://docs.github.com/en/enterprise-cloud@latest/copilot/responsible-use/chat)

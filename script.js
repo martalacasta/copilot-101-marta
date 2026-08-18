@@ -9,7 +9,10 @@
   const progressBar = document.getElementById("progress-bar");
   const dotsContainer = document.getElementById("slide-dots");
   const announcer = document.getElementById("live-announcer");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let currentIndex = 0;
+  let navigationInProgress = false;
+  let navigationTimer;
 
   const clampIndex = (index) => Math.max(0, Math.min(index, slides.length - 1));
 
@@ -22,11 +25,8 @@
     const hash = `#slide-${index + 1}`;
     if (window.location.hash === hash) return;
 
-    if (replace) {
-      window.history.replaceState(null, "", hash);
-    } else {
-      window.history.pushState(null, "", hash);
-    }
+    const method = replace ? "replaceState" : "pushState";
+    window.history[method](null, "", hash);
   };
 
   const announceSlide = (slide, index) => {
@@ -35,14 +35,18 @@
     announcer.textContent = `Slide ${index + 1} of ${slides.length}: ${title}. ${duration}.`;
   };
 
-  const showSlide = (requestedIndex, options = {}) => {
+  const activateSlide = (requestedIndex, options = {}) => {
     const nextIndex = clampIndex(requestedIndex);
     const previousIndex = currentIndex;
 
     slides.forEach((slide, index) => {
       slide.classList.toggle("is-active", index === nextIndex);
       slide.classList.toggle("was-active", index < nextIndex);
-      slide.setAttribute("aria-hidden", String(index !== nextIndex));
+      if (index === nextIndex) {
+        slide.setAttribute("aria-current", "true");
+      } else {
+        slide.removeAttribute("aria-current");
+      }
     });
 
     currentIndex = nextIndex;
@@ -56,13 +60,29 @@
       dot.tabIndex = index === nextIndex ? 0 : -1;
     });
 
+    if (!options.silent && previousIndex !== nextIndex) {
+      announceSlide(slides[nextIndex], nextIndex);
+    }
+  };
+
+  const showSlide = (requestedIndex, options = {}) => {
+    const nextIndex = clampIndex(requestedIndex);
+    activateSlide(nextIndex, options);
+
     if (!options.fromHash) {
       updateHash(nextIndex, options.replaceHash);
     }
 
-    if (!options.silent && previousIndex !== nextIndex) {
-      announceSlide(slides[nextIndex], nextIndex);
-    }
+    navigationInProgress = true;
+    window.clearTimeout(navigationTimer);
+    navigationTimer = window.setTimeout(() => {
+      navigationInProgress = false;
+    }, prefersReducedMotion.matches ? 50 : 600);
+
+    slides[nextIndex].scrollIntoView({
+      behavior: options.instant || prefersReducedMotion.matches ? "auto" : "smooth",
+      block: "start",
+    });
 
     if (options.focus) {
       slides[nextIndex].focus({ preventScroll: true });
@@ -99,8 +119,10 @@
 
     const actions = {
       ArrowRight: () => showSlide(currentIndex + 1, { focus: true }),
+      ArrowDown: () => showSlide(currentIndex + 1, { focus: true }),
       PageDown: () => showSlide(currentIndex + 1, { focus: true }),
       ArrowLeft: () => showSlide(currentIndex - 1, { focus: true }),
+      ArrowUp: () => showSlide(currentIndex - 1, { focus: true }),
       PageUp: () => showSlide(currentIndex - 1, { focus: true }),
       Home: () => showSlide(0, { focus: true }),
       End: () => showSlide(slides.length - 1, { focus: true }),
@@ -120,5 +142,24 @@
     showSlide(indexFromHash(), { fromHash: true, focus: true });
   });
 
-  showSlide(indexFromHash(), { fromHash: true, replaceHash: true, silent: true });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (navigationInProgress) return;
+
+      const visibleSlide = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visibleSlide) return;
+      const index = slides.indexOf(visibleSlide.target);
+      if (index === currentIndex) return;
+
+      activateSlide(index);
+      updateHash(index, true);
+    },
+    { threshold: [0.2, 0.4, 0.6] },
+  );
+
+  slides.forEach((slide) => observer.observe(slide));
+  showSlide(indexFromHash(), { fromHash: true, instant: true, replaceHash: true, silent: true });
 })();

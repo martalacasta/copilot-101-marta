@@ -1,6 +1,6 @@
 # GitHub Copilot 101
 
-A polished, dependency-free presentation for Marta La Casta's 45-minute GitHub Copilot 101 session for new Hubbers on Tuesday, 25 August 2026.
+A polished, dependency-free presentation for Marta Lacasta's 45-minute GitHub Copilot 101 session for new Hubbers on Tuesday, 25 August 2026.
 
 **View the deck:** <https://martalacasta.github.io/copilot-101-marta/>
 
@@ -30,13 +30,13 @@ Open <http://localhost:8000>. You can also open `index.html` directly in a brows
 
 | Key | Action |
 | --- | --- |
-| `ArrowRight`, `Space`, `PageDown` | Next slide |
-| `ArrowLeft`, `Shift+Space`, `PageUp` | Previous slide |
+| `ArrowRight`, `ArrowDown`, `Space`, `PageDown` | Next slide |
+| `ArrowLeft`, `ArrowUp`, `Shift+Space`, `PageUp` | Previous slide |
 | `Home` | First slide |
 | `End` | Last slide |
 | `N` | Toggle speaker notes |
 
-The on-screen controls are clickable, every slide has a URL hash, and the progress bar tracks the current position.
+Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to each section, the on-screen controls are clickable, every slide has a URL hash, and the progress bar tracks the current position.
 
 ## Presenting and printing
 
