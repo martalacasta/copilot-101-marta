@@ -1,18 +1,19 @@
-# GitHub Copilot 101
+# Copilot at GitHub: From Context to Contribution
 
-A polished, dependency-free presentation for Marta Lacasta's 45-minute GitHub Copilot 101 session for new Hubbers on Tuesday, 25 August 2026.
+A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 90-minute Copilot session for new Hubbers. The session is structured in two parts: Copilot fundamentals, followed by an end-to-end demonstration.
 
 **View the deck:** <https://martalacasta.github.io/copilot-101-marta/>
 
-## Run of show
+## Workshop shape
 
 | Segment | Time | Focus |
 | --- | ---: | --- |
-| Understand + apply | 25 min | Mental model, autonomy, prompting, quality, and trust |
-| Demo | 12 min | Ask, Plan, Agent, Review |
-| Q&A + buffer | 8 min | First-week habits, questions, and parked detours |
+| Opening | 5 min | Facilitator-only room calibration questions |
+| Copilot fundamentals | 30 min | What it is, multi-model routing, surfaces, coding agents, local and cloud sandboxes, workflows, MCPs, skills, code review, use cases, and guardrails |
+| End-to-end demo | 40 min | Connected context, source validation, GitHub issue draft, and review |
+| Questions + buffer | 15 min | Resources, current setup pointers, questions, or time back |
 
-Questions are welcome throughout. Deep detours can be parked for the final buffer.
+The common flow is **Question → grounded context → GitHub action → review → next step**. Prepare all demo paths, then select only two based on the room.
 
 ## Local preview
 
@@ -43,16 +44,27 @@ Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to eac
 - Presenter notes are embedded in every slide and hidden by default. Press `N` to show or hide them.
 - Use the browser's print dialog to export a landscape PDF with one slide per page.
 - Turn notes on before printing if you want a notes overlay included in the PDF.
-- See [`demo-guide.md`](demo-guide.md) for exact prompts, timing, fallback paths, alternative demos, seeded questions, and source links.
+- See [`session-script.md`](session-script.md) for the room questions, slide talk track, transitions, exact demo script, and current release sources.
+- See [`facilitator-runbook.md`](facilitator-runbook.md) for preparation and delivery logistics.
+- See [`demo-guide.md`](demo-guide.md) for exact prompts, timeboxes, recovery paths, and demo selection.
+- Use [`demo-assets/`](demo-assets/) for permission-safe local fallbacks.
 
 ## Updating the deck
 
 - Edit slide content and speaker notes in [`index.html`](index.html).
 - Edit layout, theme, responsive behavior, or print styles in [`styles.css`](styles.css).
 - Edit navigation behavior in [`script.js`](script.js).
-- Keep the feature snapshot date visible when changing time-sensitive product claims.
+- Prefer durable workflow guidance over time-sensitive feature inventories.
 - Verify plan, policy, client, and rollout caveats against the current [feature matrix](https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/copilot-feature-matrix) and [Copilot changelog](https://github.blog/changelog/label/copilot/).
-- Preserve 16 `.slide` sections unless the session timing and run of show are intentionally revised.
+- Keep the deck aligned with the current [participant overview](https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md), [companion guide](https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-at-github-companion-guide.md), and facilitator guidance.
+
+## Product visual sources
+
+The deck uses official GitHub product visuals from dated changelog entries:
+
+- [`assets/copilot-fusion-patterns.png`](assets/copilot-fusion-patterns.png): [Route and orchestrate models with GitHub Copilot Fusion](https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion)
+- [`assets/vscode-copilot-harness.png`](assets/vscode-copilot-harness.png): [GitHub Copilot in VS Code Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases)
+- [`assets/copilot-app-projects.jpg`](assets/copilot-app-projects.jpg): [GitHub Copilot app Universe releases](https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases)
 
 ## Deployment
 
