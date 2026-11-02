@@ -47,6 +47,8 @@ Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to eac
 - See [`session-script.md`](session-script.md) for the room questions, slide talk track, transitions, exact demo script, and current release sources.
 - See [`facilitator-runbook.md`](facilitator-runbook.md) for preparation and delivery logistics.
 - See [`demo-guide.md`](demo-guide.md) for exact prompts, timeboxes, recovery paths, and demo selection.
+- See [`demo-session-plan.md`](demo-session-plan.md) for the connected 45-minute demo story, exact talk track, prompts, canvas checkpoint, transitions, and cutoffs.
+- See [`demo-repository-kickoff.md`](demo-repository-kickoff.md) for the reusable prompt that prepares the separate Universe Explorer demonstration repository.
 - Use [`demo-assets/`](demo-assets/) for permission-safe local fallbacks.
 
 ## Updating the deck
