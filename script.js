@@ -6,10 +6,16 @@
   const nextButton = document.getElementById("next-slide");
   const notesButton = document.getElementById("notes-toggle");
   const currentSlideLabel = document.getElementById("current-slide");
+  const currentSectionLabel = document.getElementById("current-section-label");
+  const totalSlidesLabel = document.getElementById("total-slides");
   const progressBar = document.getElementById("progress-bar");
   const dotsContainer = document.getElementById("slide-dots");
   const announcer = document.getElementById("live-announcer");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const mainSlides = slides.filter((slide) => slide.dataset.section !== "appendix");
+  const appendixSlides = slides.filter((slide) => slide.dataset.section === "appendix");
+  const mainCloseIndex = slides.indexOf(mainSlides.at(-1));
+  const appendixStartIndex = slides.indexOf(appendixSlides[0]);
   let currentIndex = 0;
   let navigationInProgress = false;
   let navigationTimer;
@@ -32,7 +38,11 @@
   const announceSlide = (slide, index) => {
     const title = slide.dataset.title || `Slide ${index + 1}`;
     const duration = slide.dataset.duration || "";
-    announcer.textContent = `Slide ${index + 1} of ${slides.length}: ${title}. ${duration}.`;
+    const isAppendix = slide.dataset.section === "appendix";
+    const sectionSlides = isAppendix ? appendixSlides : mainSlides;
+    const sectionIndex = sectionSlides.indexOf(slide) + 1;
+    const sectionName = isAppendix ? "Appendix" : "Main";
+    announcer.textContent = `${sectionName} slide ${sectionIndex} of ${sectionSlides.length}: ${title}. ${duration}.`;
   };
 
   const activateSlide = (requestedIndex, options = {}) => {
@@ -50,10 +60,19 @@
     });
 
     currentIndex = nextIndex;
-    currentSlideLabel.textContent = String(nextIndex + 1);
-    progressBar.style.width = `${((nextIndex + 1) / slides.length) * 100}%`;
+    const activeSlide = slides[nextIndex];
+    const isAppendix = activeSlide.dataset.section === "appendix";
+    const sectionSlides = isAppendix ? appendixSlides : mainSlides;
+    const sectionIndex = sectionSlides.indexOf(activeSlide) + 1;
+    currentSectionLabel.textContent = isAppendix ? "Appendix" : "Main";
+    currentSlideLabel.textContent = String(sectionIndex);
+    totalSlidesLabel.textContent = String(sectionSlides.length);
+    progressBar.style.width = `${(sectionIndex / sectionSlides.length) * 100}%`;
     previousButton.disabled = nextIndex === 0;
     nextButton.disabled = nextIndex === slides.length - 1;
+    nextButton.setAttribute("aria-label", nextIndex === mainCloseIndex ? "Open appendix" : "Next slide");
+    nextButton.dataset.label = nextIndex === mainCloseIndex ? "Appendix" : "";
+    document.body.classList.toggle("viewing-appendix", isAppendix);
 
     Array.from(dotsContainer.children).forEach((dot, index) => {
       dot.setAttribute("aria-current", String(index === nextIndex));
@@ -104,8 +123,17 @@
   slides.forEach((slide, index) => {
     const dot = document.createElement("button");
     dot.className = "slide-dot";
+    if (slide.dataset.section === "appendix") {
+      dot.classList.add("appendix-dot");
+    }
+    if (index === appendixStartIndex) {
+      dot.classList.add("appendix-start");
+    }
     dot.type = "button";
-    dot.setAttribute("aria-label", `Go to slide ${index + 1}: ${slide.dataset.title}`);
+    const isAppendix = slide.dataset.section === "appendix";
+    const sectionSlides = isAppendix ? appendixSlides : mainSlides;
+    const sectionIndex = sectionSlides.indexOf(slide) + 1;
+    dot.setAttribute("aria-label", `Go to ${isAppendix ? "appendix" : "main"} slide ${sectionIndex}: ${slide.dataset.title}`);
     dot.addEventListener("click", () => showSlide(index, { focus: true }));
     dotsContainer.appendChild(dot);
   });
@@ -125,8 +153,10 @@
       ArrowUp: () => showSlide(currentIndex - 1, { focus: true }),
       PageUp: () => showSlide(currentIndex - 1, { focus: true }),
       Home: () => showSlide(0, { focus: true }),
-      End: () => showSlide(slides.length - 1, { focus: true }),
+      End: () => showSlide(event.shiftKey ? slides.length - 1 : mainCloseIndex, { focus: true }),
       " ": () => showSlide(currentIndex + (event.shiftKey ? -1 : 1), { focus: true }),
+      a: () => showSlide(appendixStartIndex, { focus: true }),
+      A: () => showSlide(appendixStartIndex, { focus: true }),
       n: toggleNotes,
       N: toggleNotes,
     };

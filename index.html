@@ -21,12 +21,12 @@
       </a>
       <div class="header-meta">
         <span class="snapshot">Snapshot: 30 Oct 2026</span>
-        <span class="slide-count" aria-live="polite"><span id="current-slide">1</span> / 16</span>
+        <span class="slide-count" aria-live="polite"><span id="current-section-label">Main</span> <span id="current-slide">1</span> / <span id="total-slides">7</span></span>
       </div>
     </header>
 
     <main id="deck" class="deck" aria-label="GitHub Copilot 101 slide deck">
-      <section class="slide cover-slide is-active" id="slide-1" data-title="Cover" data-duration="2 min" tabindex="-1" aria-labelledby="slide-1-title">
+      <section class="slide cover-slide is-active" id="slide-1" data-title="Cover" data-duration="1 min" data-section="main" tabindex="-1" aria-labelledby="slide-1-title">
         <div class="slide-inner cover-layout">
           <div class="eyebrow"><span class="pulse-dot"></span> New Hubber session</div>
           <div>
@@ -37,62 +37,21 @@
           <div class="cover-footer">
             <div>
               <p class="presenter-name">Marta Lacasta</p>
-              <p>Copilot fundamentals + end-to-end demo</p>
+              <p>Short foundation + prepared end-to-end demo</p>
             </div>
-            <div class="cover-chip">90 minutes</div>
+            <div class="cover-chip">45 minutes</div>
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 2 minutes</strong>
-          <p>Frame the session in two parts. Part one builds shared vocabulary and a practical mental model. Part two uses one workflow end to end: find context, validate it, turn it into GitHub work, and review before acting.</p>
+          <strong>Timing: 1 minute</strong>
+          <p>Set the 45-minute contract: eight minutes of framing, a 29-minute live demonstration, then eight minutes for questions and close. Ask at most one quick room-calibration question while this slide is visible.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-2" data-title="Session structure" data-duration="2 min" tabindex="-1" aria-labelledby="slide-2-title">
+      <section class="slide history-slide" id="slide-2" data-title="Copilot evolution" data-duration="2 min" data-section="main" tabindex="-1" aria-labelledby="slide-2-title">
         <div class="slide-inner">
-          <div class="section-label">01 / Today</div>
-          <h2 id="slide-2-title">Learn the system. Then use the system.</h2>
-          <div class="two-part-agenda">
-            <article>
-              <span>PART 1 · 35 MIN</span>
-              <h3>Copilot fundamentals</h3>
-              <p>What it is, models, surfaces, coding agents, sandboxes, workflows, MCPs, skills, use cases, and guardrails.</p>
-            </article>
-            <article>
-              <span>PART 2 · 40 MIN</span>
-              <h3>End-to-end demonstration</h3>
-              <p>Question → connected context → source validation → GitHub artifact → review → next step.</p>
-            </article>
-          </div>
-          <p class="callout subtle"><strong>Final 15 minutes:</strong> questions, setup pointers, and buffer. We can finish early when the outcomes are met.</p>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 2 minutes</strong>
-          <p>Keep this slide brief. Questions for calibrating the room are in the facilitator script, not in the deck.</p>
-        </aside>
-      </section>
-
-      <section class="slide" id="slide-3" data-title="What is Copilot" data-duration="4 min" tabindex="-1" aria-labelledby="slide-3-title">
-        <div class="slide-inner">
-          <div class="section-label">Part 1 / What it is</div>
-          <h2 id="slide-3-title">Assistant + agent + platform.</h2>
-          <div class="definition-columns">
-            <article><span>ASSISTANT</span><h3>Helps you think and create</h3><p>Completes, explains, drafts, transforms, and keeps you in flow.</p></article>
-            <article><span>AGENT</span><h3>Works through a task</h3><p>Plans, edits, runs tools, verifies, and iterates toward an outcome.</p></article>
-            <article><span>PLATFORM</span><h3>Connects the system</h3><p>Models, context, tools, policies, customizations, workflows, and agents.</p></article>
-          </div>
-          <p class="definition-statement">The interface changes. The human responsibility does not: <strong>you define the outcome and decide what is ready.</strong></p>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
-          <p>Use all three frames. Completions and chat are assistant interactions. Agent workflows take multi-step action. The platform frame explains models, tools, context, governance, and extensibility.</p>
-        </aside>
-      </section>
-
-      <section class="slide history-slide" id="slide-4" data-title="Copilot evolution" data-duration="4 min" tabindex="-1" aria-labelledby="slide-4-title">
-        <div class="slide-inner">
-          <div class="section-label">Part 1 / The shift</div>
-          <h2 id="slide-4-title">From predicting code to coordinating work.</h2>
+          <div class="section-label">Opening / Where Copilot comes from</div>
+          <h2 id="slide-2-title">From predicting code to coordinating work.</h2>
           <ol class="history-line compact-history" aria-label="GitHub Copilot evolution">
             <li><time datetime="2021">2021</time><strong>Complete</strong><p>Predict the next line or block.</p></li>
             <li><time datetime="2023">2023</time><strong>Chat</strong><p>Explain, transform, and answer in context.</p></li>
@@ -103,15 +62,147 @@
           <p class="history-summary">The useful question changed from <strong>“What code can it suggest?”</strong> to <strong>“What outcome can we safely move forward?”</strong></p>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
+          <strong>Timing: 2 minutes</strong>
           <p>Do not spend time on every release. Explain the conceptual shift: suggestion, conversation, agency, and coordinated workflows. Human accountability remains constant.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-5" data-title="Multi-model Copilot" data-duration="5 min" tabindex="-1" aria-labelledby="slide-5-title">
+      <section class="slide" id="slide-3" data-title="What is Copilot" data-duration="1.5 min" data-section="main" tabindex="-1" aria-labelledby="slide-3-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Multi-model</div>
-          <h2 id="slide-5-title">Choose a model — or let Copilot route the work.</h2>
+          <div class="section-label">Opening / Mental model</div>
+          <h2 id="slide-3-title">Assistant + agent + platform.</h2>
+          <div class="definition-columns">
+            <article><span>ASSISTANT</span><h3>Helps you think and create</h3><p>Completes, explains, drafts, transforms, and keeps you in flow.</p></article>
+            <article><span>AGENT</span><h3>Works through a task</h3><p>Plans, edits, runs tools, verifies, and iterates toward an outcome.</p></article>
+            <article><span>PLATFORM</span><h3>Connects the system</h3><p>Models, context, tools, policies, customizations, workflows, and agents.</p></article>
+          </div>
+          <p class="definition-statement">The interface changes. The human responsibility does not: <strong>you define the outcome and decide what is ready.</strong></p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1.5 minutes</strong>
+          <p>Use all three frames. Completions and chat are assistant interactions. Agent workflows take multi-step action. The platform frame explains models, tools, context, governance, and extensibility.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-4" data-title="Surfaces" data-duration="2 min" data-section="main" tabindex="-1" aria-labelledby="slide-4-title">
+        <div class="slide-inner">
+          <div class="section-label">Opening / Where it lives</div>
+          <h2 id="slide-4-title">One Copilot. Different surfaces for different work.</h2>
+          <div class="surface-showcase">
+            <div class="surface-list">
+              <article><span>IDE</span><p>Completions, chat, plan, agents, tests, review, and local tools.</p></article>
+              <article><span>GitHub.com</span><p>Issues, pull requests, code review, repositories, and cloud agents.</p></article>
+              <article><span>CLI</span><p>Terminal-native sessions with local files, GitHub, MCPs, skills, and tools.</p></article>
+              <article><span>Copilot app + mobile</span><p>Projects, sessions, delegation, connected context, review, and cross-client continuity.</p></article>
+            </div>
+            <figure class="product-figure surface-figure">
+              <img src="assets/vscode-copilot-harness.png" alt="VS Code Copilot harness picker showing local, cloud, and other agent options">
+              <figcaption><a href="https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases">Copilot in VS Code, 28 Oct 2026</a></figcaption>
+            </figure>
+          </div>
+          <p class="surface-rule"><strong>Choose the surface where the context is strongest and the result is easiest to review.</strong> Sessions can increasingly continue across clients.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 2 minutes</strong>
+          <p>Explain that surfaces do not necessarily have identical tools or permissions. IDE is strongest for tight code loops, GitHub.com for repository collaboration, CLI for terminal and connected context, and the app for longer session-oriented work.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-5" data-title="How to work with Copilot" data-duration="1.5 min" data-section="main" tabindex="-1" aria-labelledby="slide-5-title">
+        <div class="slide-inner">
+          <div class="section-label">Opening / Demo control loop</div>
+          <h2 id="slide-5-title">Start with a real question. Keep the evidence visible.</h2>
+          <ol class="workflow-line" aria-label="Question to next step workflow">
+            <li><span>01</span><strong>Question</strong><small>State the outcome</small></li>
+            <li><span>02</span><strong>Context</strong><small>Retrieve useful sources</small></li>
+            <li><span>03</span><strong>Action</strong><small>Draft, change, review, or task</small></li>
+            <li><span>04</span><strong>Evidence</strong><small>Sources, checks, and diff</small></li>
+            <li><span>05</span><strong>Decision</strong><small>Publish, delegate, ask, or stop</small></li>
+          </ol>
+          <div class="prompt-contract">
+            <span>Prompt contract</span>
+            <code>Inspect [scope]. Produce [outcome]. Preserve [boundaries]. Verify with [evidence]. Stop before [approval point].</code>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1.5 minutes</strong>
+          <p>Repeat this workflow during the demo. Before running the task, inspect the prepared custom agent, repository instructions, reusable skill, and documented MCP or plugin connections. The prompt contract makes the finish line checkable: scope, outcome, boundaries, evidence, and an approval point.</p>
+        </aside>
+      </section>
+
+      <section class="slide demo-title-slide" id="slide-6" data-title="Live demo" data-duration="29 min" data-section="main" tabindex="-1" aria-labelledby="slide-6-title">
+        <div class="slide-inner">
+          <div class="section-label">Main / Live demonstration</div>
+          <h2 id="slide-6-title">Now use the system.</h2>
+          <p>Prepared agent → Universe Explorer → evidence → draft → review</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 29 minutes</strong>
+          <p>Use about one minute to transition out of the deck, then run the 28-minute default demonstration from session-script.md and demo-guide.md. The custom agent and supporting configuration must already exist: show its role, instructions, tools, boundaries, and expected output; show repository-wide instructions; show the reusable skill; explain MCP connections and plugin packaging; then select the prepared agent for the Universe Explorer task. Do not create or configure the agent live. Stop before publishing unless you explicitly decide otherwise.</p>
+        </aside>
+      </section>
+
+      <section class="slide closing-slide" id="slide-7" data-title="Questions and close" data-duration="8 min" data-section="main" tabindex="-1" aria-labelledby="slide-7-title">
+        <div class="slide-inner resources-slide">
+          <div class="section-label">Close / Questions + resources</div>
+          <div class="resources-layout">
+            <div>
+              <h2 id="slide-7-title">Start with one real question and one source you can inspect.</h2>
+              <p class="resource-intro">Question → context → action → review → next step</p>
+              <div class="resource-links compact" aria-label="Copilot resources">
+                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md">Participant overview</a>
+                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-at-github-companion-guide.md">Companion guide</a>
+                <a href="https://docs.github.com/en/copilot">GitHub Copilot docs</a>
+                <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix">Feature matrix</a>
+                <a href="https://github.blog/changelog/label/copilot/">Copilot changelog</a>
+                <a href="https://github.com/trust-center">Trust Center</a>
+              </div>
+            </div>
+            <div class="closing-mark" aria-hidden="true">
+              <span class="orbit orbit-one"></span>
+              <span class="orbit orbit-two"></span>
+              <span class="core">YOU</span>
+            </div>
+          </div>
+          <div class="closing-footer">
+            <p><strong>Thank you.</strong> Marta Lacasta</p>
+            <p>martalacasta.github.io/copilot-101-marta</p>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 8 minutes</strong>
+          <p>Use this time for questions, current setup resources, and one practical next step. Appendix slides follow this close but are not part of the normal spoken sequence. Finish early when the session outcomes are met.</p>
+        </aside>
+      </section>
+
+      <section class="slide appendix-intro-slide" id="slide-8" data-title="Appendix guide" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-8-title">
+        <div class="slide-inner">
+          <div class="section-label">Appendix / Reference</div>
+          <h2 id="slide-8-title">Reference slides for questions.</h2>
+          <div class="two-part-agenda">
+            <article>
+              <span>MAIN RUN · 45 MIN</span>
+              <h3>8 + 29 + 8</h3>
+              <p>Short opening, live demonstration, then questions and close.</p>
+            </article>
+            <article>
+              <span>REFERENCE ONLY</span>
+              <h3>Go deeper when asked</h3>
+              <p>Models, autonomy, agents, workflows, MCP, skills, new capabilities, use cases, and guardrails.</p>
+            </article>
+          </div>
+          <p class="callout subtle"><strong>Presenter shortcut:</strong> press <kbd>A</kbd> to jump here. Press <kbd>Home</kbd> or <kbd>End</kbd> to return to the main opening or close.</p>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Reference only</strong>
+          <p>This is the appendix divider and map. Do not show it during the normal run. Use the reference slides only when a question benefits from a visual explanation.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-9" data-title="Multi-model Copilot" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-9-title">
+        <div class="slide-inner">
+          <div class="section-label">Appendix / Multi-model</div>
+          <h2 id="slide-9-title">Choose a model — or let Copilot route the work.</h2>
           <div class="image-story-layout model-story">
             <div class="story-copy">
               <p class="lead-copy">Copilot supports model choice across multiple providers. The useful choice is not always a model name; it can be the routing strategy and effort level.</p>
@@ -130,39 +221,15 @@
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 5 minutes</strong>
+          <strong>Reference only</strong>
           <p>Avoid reading a static model catalog. Explain direct model choice, model policies, Fusion routing and orchestration, effort levels, and experimental local-model routing. Availability depends on client, plan, policy, and hardware.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-6" data-title="Surfaces" data-duration="4 min" tabindex="-1" aria-labelledby="slide-6-title">
+      <section class="slide" id="slide-10" data-title="Autonomy modes" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-10-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Where it lives</div>
-          <h2 id="slide-6-title">One Copilot. Different surfaces for different work.</h2>
-          <div class="surface-showcase">
-            <div class="surface-list">
-              <article><span>IDE</span><p>Completions, chat, plan, agents, tests, review, and local tools.</p></article>
-              <article><span>GitHub.com</span><p>Issues, pull requests, code review, repositories, and cloud agents.</p></article>
-              <article><span>CLI</span><p>Terminal-native sessions with local files, GitHub, MCPs, skills, and tools.</p></article>
-              <article><span>Copilot app + mobile</span><p>Projects, sessions, delegation, connected context, review, and cross-client continuity.</p></article>
-            </div>
-            <figure class="product-figure surface-figure">
-              <img src="assets/vscode-copilot-harness.png" alt="VS Code Copilot harness picker showing local, cloud, and other agent options">
-              <figcaption><a href="https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases">Copilot in VS Code, 28 Oct 2026</a></figcaption>
-            </figure>
-          </div>
-          <p class="surface-rule"><strong>Choose the surface where the context is strongest and the result is easiest to review.</strong> Sessions can increasingly continue across clients.</p>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
-          <p>Explain that surfaces do not necessarily have identical tools or permissions. IDE is strongest for tight code loops, GitHub.com for repository collaboration, CLI for terminal and connected context, and the app for longer session-oriented work.</p>
-        </aside>
-      </section>
-
-      <section class="slide" id="slide-7" data-title="Autonomy modes" data-duration="4 min" tabindex="-1" aria-labelledby="slide-7-title">
-        <div class="slide-inner">
-          <div class="section-label">Part 1 / Choose the mode</div>
-          <h2 id="slide-7-title">Use only as much autonomy as the task needs.</h2>
+          <div class="section-label">Appendix / Choose the mode</div>
+          <h2 id="slide-10-title">Use only as much autonomy as the task needs.</h2>
           <ol class="ladder" aria-label="Copilot autonomy modes">
             <li><span class="ladder-step">1</span><div><strong>Complete</strong><small>Suggest the next code or edit</small></div></li>
             <li><span class="ladder-step">2</span><div><strong>Ask</strong><small>Explain, locate, compare, or draft</small></div></li>
@@ -173,15 +240,15 @@
           <p class="rule-banner">More autonomy increases the value of <strong>clear scope, explicit constraints, checkpoints, and evidence.</strong></p>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
+          <strong>Reference only</strong>
           <p>Give one simple example for each level. Explain that Plan is valuable when scope is uncertain, while delegation is strongest for bounded tasks with clear acceptance criteria and good feedback.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-8" data-title="Coding agents and workflows" data-duration="5 min" tabindex="-1" aria-labelledby="slide-8-title">
+      <section class="slide" id="slide-11" data-title="Coding agents and workflows" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-11-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Agents + workflows</div>
-          <h2 id="slide-8-title">Agents do the task. Workflows keep it moving.</h2>
+          <div class="section-label">Appendix / Agents + workflows</div>
+          <h2 id="slide-11-title">Agents do the task. Workflows keep it moving.</h2>
           <div class="agent-workflow-layout">
             <article class="agent-task-panel">
               <span class="panel-kicker">CODING AGENT · BOUNDED TASK</span>
@@ -212,15 +279,15 @@
           </p>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 5 minutes</strong>
+          <strong>Reference only</strong>
           <p>Explain the difference between a bounded coding-agent task and a repeatable workflow. Local sandboxing restricts tool access on the user's machine; a cloud sandbox runs the whole session in a GitHub-hosted environment; Actions is a repository-scoped environment. Copilot code review provides suggestions on the pull request, but its feedback still needs validation. Use Agent Merge as the workflow example: it watches selected pull request blockers and works on them, while a person owns the final merge.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-9" data-title="MCPs" data-duration="4 min" tabindex="-1" aria-labelledby="slide-9-title">
+      <section class="slide" id="slide-12" data-title="MCPs" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-12-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Connected context</div>
-          <h2 id="slide-9-title">MCP connects Copilot to where the work lives.</h2>
+          <div class="section-label">Appendix / Connected context</div>
+          <h2 id="slide-12-title">MCP connects Copilot to where the work lives.</h2>
           <div class="mcp-network" aria-label="Copilot connected to workplace context through MCP">
             <div class="mcp-source github-source"><span>GitHub</span><small>code · issues · PRs · Actions</small></div>
             <div class="mcp-source workiq-source"><span>WorkIQ</span><small>meetings · mail · documents</small></div>
@@ -231,54 +298,33 @@
           <p class="mcp-caption"><strong>MCP is the connection, not the answer.</strong> Permissions, freshness, scope, ownership, and source quality still matter.</p>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
+          <strong>Reference only</strong>
           <p>Describe MCP as a standard connection between Copilot and a system. A missing result can mean missing access, missing connection, or insufficient scope; it does not prove that information does not exist.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-10" data-title="Skills and customization" data-duration="4 min" tabindex="-1" aria-labelledby="slide-10-title">
+      <section class="slide" id="slide-13" data-title="Skills and customization" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-13-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Reusable expertise</div>
-          <h2 id="slide-10-title">Skills tell Copilot how to approach repeatable work.</h2>
+          <div class="section-label">Appendix / Reusable expertise</div>
+          <h2 id="slide-13-title">Customize the role, rules, method, and connections.</h2>
           <div class="custom-stack">
-            <article class="custom-row recommended"><span class="custom-index">Context</span><div><h3>MCPs and tools</h3><p>Provide access to systems and actions.</p></div><span class="status-chip">Connection</span></article>
-            <article class="custom-row"><span class="custom-index">Method</span><div><h3>Skills</h3><p>Package instructions for meeting prep, research, review, investigation, or creation.</p></div><span class="status-chip">Recipe</span></article>
-            <article class="custom-row"><span class="custom-index">Rules</span><div><h3>Repository instructions</h3><p>Capture commands, conventions, boundaries, and what “done” means.</p></div><span class="status-chip">Shared context</span></article>
-            <article class="custom-row"><span class="custom-index">Repeat</span><div><h3>Prompt files, workflows, and automations</h3><p>Make stable task shapes reusable and observable.</p></div><span class="status-chip">Scale</span></article>
+            <article class="custom-row recommended"><span class="custom-index">Role</span><div><h3>Custom agent</h3><p>Defines purpose, instructions, tools, boundaries, and expected output.</p></div><span class="status-chip">Specialist</span></article>
+            <article class="custom-row"><span class="custom-index">Rules</span><div><h3>Repository instructions</h3><p>Apply shared conventions and boundaries broadly within the repository.</p></div><span class="status-chip">Shared context</span></article>
+            <article class="custom-row"><span class="custom-index">Method</span><div><h3>Skill</h3><p>Captures a reusable approach for a type of task.</p></div><span class="status-chip">Recipe</span></article>
+            <article class="custom-row"><span class="custom-index">Connect</span><div><h3>MCP</h3><p>Provides approved context and tools from connected systems.</p></div><span class="status-chip">Connection</span></article>
+            <article class="custom-row"><span class="custom-index">Package</span><div><h3>Plugin</h3><p>Can package tools, skills, agents, and instructions for reuse.</p></div><span class="status-chip">Distribution</span></article>
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
-          <p>Use a simple distinction: MCP retrieves or acts; a skill supplies a method. Repository instructions provide durable local rules. Workflows and automations make a stable process repeatable.</p>
+          <strong>Reference only</strong>
+          <p>Use the prepared demo artifacts in this order: agent definition, repository instructions, skill, then MCP and plugin documentation. The agent is created before the session and only inspected and selected live. MCP supplies connections and tools; a skill supplies a method; repository instructions apply shared rules; a plugin can package multiple customization artifacts.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-11" data-title="How to work with Copilot" data-duration="4 min" tabindex="-1" aria-labelledby="slide-11-title">
+      <section class="slide" id="slide-14" data-title="What is new" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-14-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Working model</div>
-          <h2 id="slide-11-title">Start with a real question. Keep the evidence visible.</h2>
-          <ol class="workflow-line" aria-label="Question to next step workflow">
-            <li><span>01</span><strong>Question</strong><small>State the outcome</small></li>
-            <li><span>02</span><strong>Context</strong><small>Retrieve useful sources</small></li>
-            <li><span>03</span><strong>Action</strong><small>Draft, change, review, or task</small></li>
-            <li><span>04</span><strong>Evidence</strong><small>Sources, checks, and diff</small></li>
-            <li><span>05</span><strong>Decision</strong><small>Publish, delegate, ask, or stop</small></li>
-          </ol>
-          <div class="prompt-contract">
-            <span>Prompt contract</span>
-            <code>Inspect [scope]. Produce [outcome]. Preserve [boundaries]. Verify with [evidence]. Stop before [approval point].</code>
-          </div>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
-          <p>Repeat this workflow during the demo. The prompt contract makes the finish line checkable: scope, outcome, boundaries, evidence, and an approval point. The action can be code, an issue, a review, a decision record, or a clear next step.</p>
-        </aside>
-      </section>
-
-      <section class="slide" id="slide-12" data-title="What is new" data-duration="5 min" tabindex="-1" aria-labelledby="slide-12-title">
-        <div class="slide-inner">
-          <div class="section-label">Part 1 / What is new</div>
-          <h2 id="slide-12-title">The unit of work is getting bigger than a chat session.</h2>
+          <div class="section-label">Appendix / What is new</div>
+          <h2 id="slide-14-title">The unit of work is getting bigger than a chat session.</h2>
           <div class="image-story-layout app-story">
             <div class="story-copy">
               <ul class="plain-feature-list large-list">
@@ -296,15 +342,15 @@
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 5 minutes</strong>
+          <strong>Reference only</strong>
           <p>Focus on the direction of travel: projects organize larger goals, workflows and automations make processes repeatable, sessions move across clients, and computer use broadens the execution surface. Treat all status as dated.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-13" data-title="Use cases" data-duration="4 min" tabindex="-1" aria-labelledby="slide-13-title">
+      <section class="slide" id="slide-15" data-title="Use cases" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-15-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Example use cases</div>
-          <h2 id="slide-13-title">Copilot is useful before, during, and after coding.</h2>
+          <div class="section-label">Appendix / Example use cases</div>
+          <h2 id="slide-15-title">Copilot is useful before, during, and after coding.</h2>
           <div class="use-case-grid">
             <article><span>UNDERSTAND</span><h3>Unfamiliar work</h3><p>Explain a repository, initiative, acronym, team, code path, or historical decision with sources.</p></article>
             <article><span>PREPARE</span><h3>Meetings and the day</h3><p>Connect calendar, documents, Slack, people, and GitHub activity into a focused briefing.</p></article>
@@ -315,15 +361,15 @@
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 4 minutes</strong>
+          <strong>Reference only</strong>
           <p>Choose only a few examples that match the audience. The point is breadth across roles, not an exhaustive catalog.</p>
         </aside>
       </section>
 
-      <section class="slide" id="slide-14" data-title="Trust and guardrails" data-duration="3 min" tabindex="-1" aria-labelledby="slide-14-title">
+      <section class="slide" id="slide-16" data-title="Trust and guardrails" data-duration="Reference" data-section="appendix" tabindex="-1" aria-labelledby="slide-16-title">
         <div class="slide-inner">
-          <div class="section-label">Part 1 / Responsible use</div>
-          <h2 id="slide-14-title">Copilot can accelerate judgment. It cannot replace accountability.</h2>
+          <div class="section-label">Appendix / Responsible use</div>
+          <h2 id="slide-16-title">Copilot can accelerate judgment. It cannot replace accountability.</h2>
           <div class="guardrail-grid">
             <article><span>01</span><h3>Use appropriate context</h3><p>Do not include secrets, credentials, customer data, or unnecessarily sensitive personal information.</p></article>
             <article><span>02</span><h3>Inspect the sources</h3><p>Check dates, authors, ownership, permissions, relevance, and conflicting guidance.</p></article>
@@ -332,53 +378,8 @@
           </div>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 3 minutes</strong>
+          <strong>Reference only</strong>
           <p>Avoid absolute statements about what Copilot can see, retain, or access. Those answers depend on the feature, configuration, surface, and policy.</p>
-        </aside>
-      </section>
-
-      <section class="slide demo-title-slide" id="slide-15" data-title="Demo" data-duration="40 min" tabindex="-1" aria-labelledby="slide-15-title">
-        <div class="slide-inner">
-          <div class="section-label">Part 2</div>
-          <h2 id="slide-15-title">Demo.</h2>
-          <p>Context → contribution → review</p>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 40 minutes</strong>
-          <p>Leave the presentation and run the detailed demonstration from session-script.md and demo-guide.md. The demo stops before publishing unless you explicitly decide otherwise.</p>
-        </aside>
-      </section>
-
-      <section class="slide closing-slide" id="slide-16" data-title="Close and resources" data-duration="15 min" tabindex="-1" aria-labelledby="slide-16-title">
-        <div class="slide-inner resources-slide">
-          <div class="section-label">Close / Questions + resources</div>
-          <div class="resources-layout">
-            <div>
-              <h2 id="slide-16-title">Start with one real question and one source you can inspect.</h2>
-              <p class="resource-intro">Question → context → action → review → next step</p>
-              <div class="resource-links compact" aria-label="Copilot resources">
-                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md">Participant overview</a>
-                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-at-github-companion-guide.md">Companion guide</a>
-                <a href="https://docs.github.com/en/copilot">GitHub Copilot docs</a>
-                <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix">Feature matrix</a>
-                <a href="https://github.blog/changelog/label/copilot/">Copilot changelog</a>
-                <a href="https://github.com/trust-center">Trust Center</a>
-              </div>
-            </div>
-            <div class="closing-mark" aria-hidden="true">
-              <span class="orbit orbit-one"></span>
-              <span class="orbit orbit-two"></span>
-              <span class="core">YOU</span>
-            </div>
-          </div>
-          <div class="closing-footer">
-            <p><strong>Thank you.</strong> Marta Lacasta</p>
-            <p>martalacasta.github.io/copilot-101-marta</p>
-          </div>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: up to 15 minutes</strong>
-          <p>Use this time for questions, current setup resources, and any parked discussion. Finish early when the session outcomes are met.</p>
         </aside>
       </section>
     </main>
@@ -393,7 +394,7 @@
     </nav>
 
     <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
-    <div id="shortcut-hint" class="shortcut-hint">Use arrow keys or Space to navigate. Press N for notes.</div>
+    <div id="shortcut-hint" class="shortcut-hint">Arrows navigate · N notes · A appendix · End main close</div>
     <div id="live-announcer" class="sr-only" aria-live="polite"></div>
     <noscript><p class="noscript-message">JavaScript is disabled. All slides are shown in document order.</p></noscript>
   </body>

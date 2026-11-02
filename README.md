@@ -1,6 +1,6 @@
 # Copilot at GitHub: From Context to Contribution
 
-A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 90-minute Copilot session for new Hubbers. The session is structured in two parts: Copilot fundamentals, followed by an end-to-end demonstration.
+A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 45-minute Copilot session for new Hubbers. The normal spoken sequence is a short five-slide opening, a live end-to-end demonstration, and a concise questions-and-close slide. Deeper product material remains available after the close as a clearly labeled appendix.
 
 **View the deck:** <https://martalacasta.github.io/copilot-101-marta/>
 
@@ -8,12 +8,13 @@ A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 90-minute Copil
 
 | Segment | Time | Focus |
 | --- | ---: | --- |
-| Opening | 5 min | Facilitator-only room calibration questions |
-| Copilot fundamentals | 30 min | What it is, multi-model routing, surfaces, coding agents, local and cloud sandboxes, workflows, MCPs, skills, code review, use cases, and guardrails |
-| End-to-end demo | 40 min | Connected context, source validation, GitHub issue draft, and review |
-| Questions + buffer | 15 min | Resources, current setup pointers, questions, or time back |
+| Opening slides | 8 min | Copilot evolution, assistant/agent/platform, surfaces, and the evidence-visible control loop |
+| End-to-end demo | 29 min | Inspect prepared customization, select the pre-created custom agent, use connected context, produce an artifact, and review it |
+| Questions + close | 8 min | Resources, current setup pointers, appendix references, or time back |
 
-The common flow is **Question → grounded context → GitHub action → review → next step**. Prepare all demo paths, then select only two based on the room.
+The common flow is **Question → grounded context → GitHub action → review → next step**. The custom agent, repository instructions, reusable skill, and connection documentation are prepared before the session; the live demo inspects and uses them rather than creating them.
+
+The main deck is **7 slides**. The remaining **9 slides** are reference material after the close: appendix guide, models/Fusion, autonomy, agents/workflows, MCP, skills/customization, what is new, use cases, and guardrails.
 
 ## Local preview
 
@@ -34,10 +35,12 @@ Open <http://localhost:8000>. You can also open `index.html` directly in a brows
 | `ArrowRight`, `ArrowDown`, `Space`, `PageDown` | Next slide |
 | `ArrowLeft`, `ArrowUp`, `Shift+Space`, `PageUp` | Previous slide |
 | `Home` | First slide |
-| `End` | Last slide |
+| `End` | Main close slide |
+| `Shift+End` | Last appendix slide |
+| `A` | First appendix slide |
 | `N` | Toggle speaker notes |
 
-Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to each section, the on-screen controls are clickable, every slide has a URL hash, and the progress bar tracks the current position.
+Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to each section, the on-screen controls are clickable, every slide has a URL hash, and the header and progress bar count the main sequence and appendix separately.
 
 ## Presenting and printing
 
