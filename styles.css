@@ -72,6 +72,16 @@ code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
+kbd {
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -131,11 +141,26 @@ code {
 }
 
 .slide-count {
-  min-width: 3.3rem;
+  min-width: 7.5rem;
   color: var(--text);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   text-align: right;
+}
+
+#current-section-label {
+  color: var(--green);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.viewing-appendix #current-section-label {
+  color: var(--yellow);
+}
+
+body.viewing-appendix .deck-header {
+  border-bottom-color: rgba(255, 184, 0, 0.42);
 }
 
 .deck {
@@ -177,6 +202,22 @@ code {
 
 .slide.was-active {
   transform: none;
+}
+
+.slide[data-section="appendix"]::after {
+  position: absolute;
+  top: 5.5rem;
+  right: 5.75rem;
+  padding: 0.32rem 0.55rem;
+  border: 1px solid rgba(255, 184, 0, 0.34);
+  border-radius: 2rem;
+  color: var(--yellow);
+  background: rgba(255, 184, 0, 0.07);
+  content: "APPENDIX · REFERENCE";
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .slide-inner {
@@ -1684,6 +1725,7 @@ body.notes-visible .slide.is-active .speaker-notes {
 }
 
 .slide-dot {
+  position: relative;
   width: 0.45rem;
   height: 0.45rem;
   padding: 0;
@@ -1704,6 +1746,44 @@ body.notes-visible .slide.is-active .speaker-notes {
   border-radius: 1rem;
   background: var(--blue);
   box-shadow: 0 0 0.65rem rgba(0, 255, 135, 0.5);
+}
+
+.slide-dot.appendix-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  background: rgba(255, 184, 0, 0.28);
+}
+
+.slide-dot.appendix-dot[aria-current="true"] {
+  width: 0.35rem;
+  height: 1.25rem;
+  background: var(--yellow);
+  box-shadow: 0 0 0.65rem rgba(255, 184, 0, 0.38);
+}
+
+.slide-dot.appendix-start {
+  margin-top: 0.6rem;
+}
+
+.slide-dot.appendix-start::before {
+  position: absolute;
+  width: 1rem;
+  height: 1px;
+  margin-top: -0.35rem;
+  margin-left: -0.32rem;
+  background: rgba(255, 184, 0, 0.35);
+  content: "";
+}
+
+#next-slide[data-label="Appendix"] {
+  width: auto;
+}
+
+#next-slide[data-label="Appendix"]::after {
+  color: var(--yellow);
+  content: attr(data-label);
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
 .progress-track {
@@ -3284,8 +3364,17 @@ body.notes-visible .slide.is-active .speaker-notes {
     padding: 0;
   }
 
+  #next-slide[data-label="Appendix"]::after {
+    display: none;
+  }
+
   .slide {
     padding-right: 3.5rem;
+  }
+
+  .slide[data-section="appendix"]::after {
+    top: 5rem;
+    right: 3.5rem;
   }
 
   .speaker-notes {

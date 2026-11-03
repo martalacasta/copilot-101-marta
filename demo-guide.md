@@ -1,17 +1,61 @@
 # Copilot at GitHub demo guide
 
-Use this guide with the Pages deck. Prepare every path, then deliver only the two that best fit the room.
+Use this guide with the Pages deck. The default live demonstration is 28 minutes, following a one-minute transition from slide 6. Prepare the custom agent and all supporting configuration before the session; inspect and use those artifacts live, but do not create or configure them in front of the room.
 
 ## Recommended default
 
-1. **Orientation itself** — connected workplace context, source inspection, and explicit access gaps.
-2. **Conversation to contribution** — a short, deterministic local source becomes a reviewed GitHub issue draft.
+1. **Inspect prepared customization** — show the pre-created custom agent, repository instructions, reusable skill, and documented MCP/plugin connections.
+2. **Universe Explorer task** — select the prepared custom agent, run the checked-in task, inspect its evidence, and create the documented draft artifact.
+3. **Review** — challenge claims, source quality, boundaries, and unmet acceptance criteria before any external action.
 
-For a highly technical room, replace the second path with the repository control-loop demo. Do not run all paths.
+The prepared repository should document the exact supported artifact locations and task prompt. This presentation repository does not create that separate demo repository.
 
-## Demo A: orientation itself
+## Default demo: prepared Universe Explorer
 
-**Timebox:** 12 minutes
+**Timebox:** 28 minutes
+
+| Time | Move |
+| --- | --- |
+| 0:00-3:00 | Inspect the custom agent, repository instructions, reusable skill, and connection/plugin documentation. |
+| 3:00-12:00 | Select the already-created custom agent and run the checked-in Universe Explorer task. |
+| 12:00-21:00 | Open source evidence, identify fact/interpretation/gap, and produce the documented draft artifact without publishing. |
+| 21:00-26:00 | Review the draft against sources, repository instructions, the skill, and acceptance criteria. |
+| 26:00-28:00 | Summarize what the agent did, what the prepared configuration controlled, and which decisions remain human-owned. |
+
+### Prepared artifact walkthrough
+
+Show, in this order:
+
+1. **Custom agent** — purpose, instructions, available tools, boundaries, expected output.
+2. **Repository instructions** — commands, conventions, safety boundaries, and definition of done that apply broadly.
+3. **Skill or workflow guidance** — the reusable method for the task.
+4. **Connections and plugin documentation** — the systems and tools exposed through MCP, plus any plugin packaging.
+
+Do not edit these files during the walkthrough. Briefly point to comments or companion documentation that explains each artifact's role and boundaries.
+
+### Run the prepared task
+
+Select the purpose-specific custom agent, such as **Universe Guide**, and run the task prompt already checked into the demo repository. The prompt and acceptance criteria should require visible source links and dates, separation of fact from interpretation, explicit gaps, and a stop before publication or external changes.
+
+### Review checkpoints
+
+- Did the selected agent stay within its documented role and allowed tools?
+- Did repository instructions and the skill visibly shape the result?
+- Are important claims linked to current sources?
+- Are missing access, uncertainty, and conflicting information explicit?
+- Does the draft meet the prepared acceptance criteria?
+- Did the workflow stop before publishing, assigning, merging, or changing an external system?
+
+### Recovery
+
+- If a connection is unavailable, name the gap and use the saved Universe Explorer output.
+- If the task stalls, open the prepared result and continue with evidence inspection and review.
+- If the demo repository is unavailable, use the permission-safe local fallbacks below.
+- Do not troubleshoot authentication, create the custom agent, or rewrite configuration live.
+
+## Permission-safe fallback A: orientation itself
+
+**Timebox:** 9 minutes
 **Purpose:** Show connected context and responsible source inspection using a question everyone shares.
 
 ### Live prompt
@@ -27,10 +71,9 @@ Link the sources. Separate sourced facts from your interpretation. For important
 | Time | Move |
 | --- | --- |
 | 0:00-1:00 | Explain the shared question and show the available connections without troubleshooting them. |
-| 1:00-5:00 | Run the prompt. Narrate which systems are searched and why. |
-| 5:00-8:00 | Open the meeting and at least one linked source. Check date, organizer, ownership, and whether the curriculum is current. |
-| 8:00-10:00 | Ask the room to identify one retrieved fact, one Copilot interpretation, and one gap. |
-| 10:00-12:00 | Produce one visible next step: open a preparation resource or capture a follow-up question. |
+| 1:00-4:00 | Run the prompt. Narrate which systems are searched and why. |
+| 4:00-7:00 | Open the meeting and at least one linked source. Check date, organizer, ownership, and whether the curriculum is current. |
+| 7:00-9:00 | Identify one retrieved fact, one Copilot interpretation, one gap, and one next step. |
 
 ### Recovery
 
@@ -39,9 +82,9 @@ Link the sources. Separate sourced facts from your interpretation. For important
 - Do not debug authentication, installation, or permissions live.
 - Do not imply that a missing result means the information does not exist.
 
-## Demo B: conversation to contribution
+## Permission-safe fallback B: conversation to contribution
 
-**Timebox:** 12 minutes
+**Timebox:** 13 minutes
 **Purpose:** Show a fast cross-tool workflow that ends in a durable GitHub artifact without publishing it.
 
 Open [`demo-assets/project-kickoff-notes.md`](demo-assets/project-kickoff-notes.md) so the audience can see the source.
@@ -95,9 +138,9 @@ Do not edit the draft yet.
 
 If generation stalls, open [`demo-assets/example-issue-draft.md`](demo-assets/example-issue-draft.md), compare it to the notes, and run only the review prompt.
 
-## Demo C: technical control loop
+## Appendix option: technical control loop
 
-**Timebox:** 12 minutes
+**Timebox:** 12 minutes; use only after the close or in a separately scheduled longer session
 **Purpose:** Show orientation, plan approval, bounded implementation, verification, and review.
 
 Use a tiny disposable CLI repository where a report command returns JSON by default. The task adds an opt-in CSV format without changing the default or public API.
@@ -160,6 +203,9 @@ Use a saved failing run and pinned commit. Ask Copilot to identify the first rel
 
 Before the session:
 
+- Confirm the custom agent, repository instructions, reusable skill, and MCP/plugin documentation are already created and commented.
+- Confirm the agent can be selected and has only the intended tools and connections.
+- Keep a saved Universe Explorer result and expected draft artifact open as the first recovery path.
 - Authenticate and open every required surface.
 - Hide notifications and unrelated tabs.
 - Increase terminal and browser text size.
@@ -170,6 +216,8 @@ Before the session:
 
 During the session:
 
+- Inspect and select the prepared custom agent; do not create or configure it live.
+- Explain the distinction among agent role, repository-wide instructions, reusable skill, MCP connections/tools, and plugin packaging.
 - Narrate source choice, approval boundaries, and verification—not every generated sentence.
 - Ask what is fact, interpretation, gap, and next action.
 - Stop before publishing, merging, sending, or changing production.
