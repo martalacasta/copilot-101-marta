@@ -55,9 +55,9 @@ The initial demo state should have a functioning application, release cards, tes
 
 Leave one bounded feature for the presenter to implement live:
 
-"Add role-based recommendations for Engineering, Product, Sales, and Operations. When a role is selected, recommend the most relevant announcements and explain why each one matters to that role."
+"Add a comparison mode that lets users select up to two announcements and compare their date, availability status, practical outcome, relevant audiences, summary, and official source side by side."
 
-The repository should make the safest implementation path discoverable, but the role-selector feature must not already be implemented in the starting state.
+The starting application should already include role-based recommendations for Engineering, Product, Sales, and Operations. The repository should make the safest implementation path discoverable, but the announcement-comparison feature must not already be implemented in the starting state.
 
 Also prepare a completed reference implementation that can be used if the live agent run is slow or fails. Do not rewrite history or use destructive Git operations. Document how the presenter can access the starting and completed checkpoints safely.
 
@@ -67,12 +67,12 @@ Prepare the demo so a canvas is a meaningful part of the implementation and revi
 
 ### Browser canvas
 
-After the Universe Guide agent implements the role-selector feature:
+After the Universe Guide agent implements the comparison feature:
 
 1. Start the local preview server.
 2. Open Universe Explorer in a browser canvas beside the Copilot conversation.
-3. Test the Engineering and Sales role experiences.
-4. Inspect keyboard navigation, focus visibility, default and empty states, source visibility, and narrow-screen behavior.
+3. Select two announcements, remove one, select another, and clear the comparison.
+4. Inspect the two-item limit, keyboard navigation, focus visibility, default and empty states, source visibility, and narrow-screen behavior.
 5. Ask Copilot to separate functional defects, accessibility concerns, visual improvements, and subjective preferences.
 6. Select one small, high-confidence correction.
 7. Implement the correction, run the relevant checks, and refresh the canvas.
@@ -86,13 +86,16 @@ Open the Universe Explorer preview in a browser canvas.
 Review the rendered experience against the approved requirements.
 
 Test:
-- Engineering and Sales role selection;
+- selecting one and then two announcements;
+- the maximum-selection message;
+- removing either announcement and clearing the comparison;
 - keyboard-only navigation;
 - focus visibility;
 - empty and default states;
 - narrow-screen layout;
-- whether each recommendation explains why it matters;
-- whether release status, date, and official source remain visible.
+- whether differences remain understandable without relying only on color;
+- whether date, availability status, practical outcome, relevant audiences, summary, and official source remain visible;
+- whether existing role-based recommendations still work.
 
 Separate:
 1. functional defects,
@@ -251,12 +254,12 @@ The runbook should support this sequence:
 4. Open and explain the reusable skill.
 5. Explain the configured tools/plugins/MCP connections.
 6. Select the Universe Guide agent.
-7. Ask it to plan the role-selector feature.
+7. Ask it to plan the announcement-comparison feature.
 8. Optionally open the plan in an editor canvas, refine one acceptance criterion, and approve the bounded plan.
 9. Implement in a local sandbox.
 10. Run focused validation.
 11. Open the result in a browser canvas.
-12. Test the role experience, accessibility, sources, and narrow-screen layout.
+12. Test comparison selection, limits, removal, accessibility, sources, existing role recommendations, and narrow-screen layout.
 13. Ask Copilot for a structured visual review without editing.
 14. Approve and implement one small, high-confidence correction.
 15. Refresh the canvas and compare the result.
@@ -279,7 +282,7 @@ Before completion:
 - validate workflow syntax where possible;
 - confirm no secrets or personal data are present;
 - verify every product claim has an official source and date;
-- confirm the starting state does not already contain the live role-selector feature;
+- confirm the starting state contains role-based recommendations but not the live announcement-comparison feature;
 - confirm the completed fallback does contain and test that feature.
 
 At the end, report:

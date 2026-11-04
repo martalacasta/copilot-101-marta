@@ -67,7 +67,7 @@ Workplace question
 ### Universe Explorer repository
 
 - Begin from the documented demo-start checkpoint.
-- Confirm the role-selector feature is not present.
+- Confirm role-based recommendations are present and the comparison feature is not.
 - Confirm the baseline checks pass quickly.
 - Open the repository instructions, Universe Guide agent, reusable skill, and connection guide.
 - Open the completed fallback checkpoint in a separate prepared session or window.
@@ -238,7 +238,8 @@ Explain:
 - how its information is sourced,
 - how it is deployed,
 - which checks protect it,
-- where role-based recommendations should be added,
+- how the existing role-based recommendations work,
+- where comparison state and UI should be added,
 - what you still need to know before changing anything.
 
 Do not edit files yet. Cite the relevant repository files.
@@ -251,7 +252,8 @@ Do not edit files yet. Cite the relevant repository files.
 - official source links;
 - existing tests;
 - validation and Pages workflows;
-- the missing role-selector feature.
+- the existing role-based recommendations;
+- the missing announcement-comparison feature.
 
 ### Say
 
@@ -331,9 +333,9 @@ Use this summary:
 
 ### Transition
 
-> Now I will select the prepared Universe Guide agent and give it a bounded feature to implement.
+> Now I will select the prepared Universe Guide agent and give it another bounded feature to implement.
 
-## 0:19-0:22 - Plan the role-selector feature
+## 0:19-0:22 - Plan the comparison feature
 
 ### Surface
 
@@ -342,23 +344,22 @@ Copilot app, Universe Guide agent, Plan mode.
 ### Prompt
 
 ```text
-Add role-based recommendations to the Universe Explorer.
+Add a comparison mode to the Universe Explorer.
 
-Support:
-- Engineering,
-- Product,
-- Sales,
-- Operations.
-
-When a role is selected, recommend the most relevant prepared announcements and explain why each matters to that role.
+Allow users to select up to two announcements and compare them side by side.
 
 Requirements:
 - use only the prepared local release data;
-- preserve release status, date, and official source;
+- add an accessible Compare control to each announcement;
+- show date, availability status, practical outcome, relevant audiences, summary, and official source;
+- prevent more than two announcements from being selected and explain the limit;
+- allow either selection to be removed and provide a clear-all action;
+- make differences understandable without relying only on color;
 - preserve the existing visual design;
 - support keyboard navigation and visible focus;
 - keep the content understandable when JavaScript is unavailable;
-- add focused tests;
+- preserve the existing role-based recommendations;
+- add focused tests for selection, the two-item limit, removal, clear-all, and empty states;
 - do not change deployment configuration;
 - do not publish, merge, or deploy.
 
@@ -374,6 +375,8 @@ Inspect what you need, propose the smallest implementation plan, and wait for my
 Check that it:
 
 - names the expected files;
+- preserves existing role recommendations;
+- enforces the two-announcement limit;
 - preserves the no-JavaScript path;
 - includes focused tests;
 - does not change pipelines or deployment;
@@ -464,7 +467,7 @@ Browser canvas beside the Copilot conversation.
 
 > Conversation is effective for reasoning and instructions, but a visual result needs a visual review surface. I will open the running application in a browser canvas while keeping the surrounding session context.
 
-Open the preview and manually select Engineering and Sales.
+Open the preview, select two announcements for comparison, remove one, and select another.
 
 ### Prompt
 
@@ -472,13 +475,16 @@ Open the preview and manually select Engineering and Sales.
 Review the Universe Explorer currently open in the browser canvas against the approved requirements.
 
 Test:
-- Engineering and Sales role selection;
+- selecting one and then two announcements;
+- the maximum-selection message;
+- removing either announcement and clearing the comparison;
 - keyboard-only navigation;
 - visible focus;
 - default and empty states;
 - narrow-screen layout;
-- whether each recommendation explains why it matters;
-- whether release status, date, and official source remain visible.
+- whether differences remain understandable without relying only on color;
+- whether date, availability status, practical outcome, relevant audiences, summary, and official source remain visible;
+- whether existing role-based recommendations still work.
 
 Separate:
 1. functional defects,
@@ -524,7 +530,7 @@ VS Code with the same repository.
 Show:
 
 - the changed files;
-- the role-selection logic;
+- the comparison selection and rendering logic;
 - one focused test;
 - the custom agent or agent selector;
 - the source links preserved in data;
