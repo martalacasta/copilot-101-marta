@@ -14,7 +14,7 @@ This is a 45-minute session for new Hubbers with basic GitHub familiarity. It ha
 | 0:08–0:12 | Ground in today's work | Select the SE agent and use WorkIQ, Slack, and GitHub context to prepare for the current Copilot 101 session. |
 | 0:12–0:15 | Enter the project | Move from the grounded work question into the prepared Universe Explorer repository. |
 | 0:15–0:19 | Prepared customization | Inspect repository instructions, the Universe Guide agent, the reusable skill, and connection documentation. |
-| 0:19–0:22 | Plan | Agree on a bounded role-selector implementation plan and approval point. |
+| 0:19–0:22 | Plan | Agree on a bounded announcement-comparison implementation plan and approval point. |
 | 0:22–0:28 | Implement | Make and validate the scoped change locally, or switch to the completed checkpoint. |
 | 0:28–0:32 | Visual review | Inspect the rendered result in a browser canvas and make one focused correction. |
 | 0:32–0:35 | Code review | Continue in VS Code to inspect the diff, tests, sources, and remaining risks. |

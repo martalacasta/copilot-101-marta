@@ -6,7 +6,7 @@ Use this guide with the Pages deck. The default live demonstration is the 29-min
 
 1. **Ground the work** — select the SE agent and ask about the Copilot 101 session using permission-appropriate WorkIQ, Slack, and GitHub context.
 2. **Enter Universe Explorer** — inspect the site, data, documentation, instructions, Universe Guide agent, skill, connections, tests, workflows, and checkpoints.
-3. **Plan and implement** — add the bounded role-selector feature locally, using the completed checkpoint if the live run exceeds its cutoff.
+3. **Plan and implement** — add the bounded announcement-comparison feature locally, using the completed checkpoint if the live run exceeds its cutoff.
 4. **Review across surfaces** — inspect the result in a browser canvas, review the code and diff in VS Code, and show Actions evidence.
 5. **Continue safely** — delegate a bounded cloud follow-up and stop before merge or deployment.
 
@@ -21,7 +21,7 @@ The prepared repository should document the exact supported artifact locations a
 | 0:00-4:00 | Use the SE agent with WorkIQ, Slack, and GitHub context to prepare for the current Copilot 101 session. |
 | 4:00-7:00 | Enter the Universe Explorer project and inspect the current application, data, tests, workflows, and missing feature. |
 | 7:00-11:00 | Explain repository instructions, the Universe Guide agent, the reusable skill, and connected tools. |
-| 11:00-14:00 | Plan the role-selector feature and approve a bounded implementation. |
+| 11:00-14:00 | Plan the announcement-comparison feature and approve a bounded implementation. |
 | 14:00-20:00 | Implement and validate locally, or switch to the completed checkpoint. |
 | 20:00-24:00 | Review the rendered result in a browser canvas and make one focused correction. |
 | 24:00-27:00 | Inspect the code, tests, sources, and diff in VS Code. |

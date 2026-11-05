@@ -9,7 +9,7 @@ This is the facilitator talk track for the Pages deck. The presentation itself c
 | 0:00–0:08 | Main opening slides | Explain the shift in Copilot, the assistant/agent/platform frame, the multi-model/multi-surface/multi-agent system, and the available surfaces. |
 | 0:08–0:12 | Workplace grounding | Select the SE agent and use WorkIQ, Slack, and GitHub context to prepare for the Copilot 101 session. |
 | 0:12–0:19 | Project and customization | Enter the Universe Explorer project and inspect the repository, instructions, custom agent, skill, and connections. |
-| 0:19–0:28 | Plan and implement | Use the Universe Guide agent to plan and implement the role-selector feature in the local repository. |
+| 0:19–0:28 | Plan and implement | Use the Universe Guide agent to plan and implement the announcement-comparison feature in the local repository. |
 | 0:28–0:35 | Visual and code review | Review the result in a browser canvas, make one focused correction, and inspect the code and diff in VS Code. |
 | 0:35–0:37 | GitHub continuation | Show Actions evidence and delegate a bounded cloud follow-up without waiting for it. |
 | 0:37–0:45 | Questions | Answer useful questions, use appendix references when helpful, or finish early. |
