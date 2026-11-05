@@ -369,6 +369,15 @@ body.viewing-appendix .deck-header {
   font-weight: 700;
 }
 
+.cover-footer .presenter-role {
+  color: var(--green);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .cover-chip {
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--border);
@@ -2484,6 +2493,58 @@ body.notes-visible .slide.is-active .speaker-notes {
   margin-top: 1.8rem !important;
 }
 
+.dimension-slide h2 {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.dimension-heading {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.copilot-mark {
+  display: grid;
+  flex: 0 0 auto;
+  width: 10rem;
+  min-height: 10rem;
+  place-items: center;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(156, 255, 199, 0.22), transparent 42%),
+    linear-gradient(145deg, rgba(0, 255, 135, 0.12), rgba(0, 12, 5, 0.92));
+  box-shadow: 0 0 3rem rgba(0, 255, 135, 0.1);
+}
+
+.copilot-mark svg {
+  width: 5.5rem;
+  fill: currentColor;
+}
+
+.copilot-mark span {
+  color: var(--green);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dimension-columns span {
+  margin-bottom: 2.5rem;
+}
+
+.dimension-columns h3 {
+  max-width: 14ch;
+  font-size: 1.75rem;
+}
+
 .image-story-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
@@ -3193,6 +3254,27 @@ body.notes-visible .slide.is-active .speaker-notes {
 
   .definition-columns span {
     margin-bottom: 1rem;
+  }
+
+  .dimension-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .copilot-mark {
+    width: 7rem;
+    min-height: 7rem;
+    padding: 0.9rem;
+    border-radius: 1.1rem;
+  }
+
+  .copilot-mark svg {
+    width: 3.5rem;
+  }
+
+  .copilot-mark span {
+    font-size: 0.58rem;
   }
 
   .product-figure {

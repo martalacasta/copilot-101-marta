@@ -1,26 +1,37 @@
 # Copilot at GitHub demo guide
 
-Use this guide with the Pages deck. The default live demonstration is 28 minutes, following a one-minute transition from slide 6. Prepare the custom agent and all supporting configuration before the session; inspect and use those artifacts live, but do not create or configure them in front of the room.
+Use this guide with the Pages deck. The default live demonstration is the 29-minute connected workflow in [`demo-session-plan.md`](demo-session-plan.md). Prepare the SE agent, Universe Guide agent, connections, repository, checkpoints, and supporting configuration before the session; inspect and use those artifacts live, but do not create or configure them in front of the room.
 
 ## Recommended default
 
-1. **Inspect prepared customization** — show the pre-created custom agent, repository instructions, reusable skill, and documented MCP/plugin connections.
-2. **Universe Explorer task** — select the prepared custom agent, run the checked-in task, inspect its evidence, and create the documented draft artifact.
-3. **Review** — challenge claims, source quality, boundaries, and unmet acceptance criteria before any external action.
+1. **Ground the work** — select the SE agent and ask about the Copilot 101 session using permission-appropriate WorkIQ, Slack, and GitHub context.
+2. **Enter Universe Explorer** — inspect the site, data, documentation, instructions, Universe Guide agent, skill, connections, tests, workflows, and checkpoints.
+3. **Plan and implement** — add the bounded announcement-comparison feature locally, using the completed checkpoint if the live run exceeds its cutoff.
+4. **Review across surfaces** — inspect the result in a browser canvas, review the code and diff in VS Code, and show Actions evidence.
+5. **Continue safely** — delegate a bounded cloud follow-up and stop before merge or deployment.
 
 The prepared repository should document the exact supported artifact locations and task prompt. This presentation repository does not create that separate demo repository.
 
-## Default demo: prepared Universe Explorer
+## Default demo: connected work to contribution
 
-**Timebox:** 28 minutes
+**Timebox:** 29 minutes
 
 | Time | Move |
 | --- | --- |
-| 0:00-3:00 | Inspect the custom agent, repository instructions, reusable skill, and connection/plugin documentation. |
-| 3:00-12:00 | Select the already-created custom agent and run the checked-in Universe Explorer task. |
-| 12:00-21:00 | Open source evidence, identify fact/interpretation/gap, and produce the documented draft artifact without publishing. |
-| 21:00-26:00 | Review the draft against sources, repository instructions, the skill, and acceptance criteria. |
-| 26:00-28:00 | Summarize what the agent did, what the prepared configuration controlled, and which decisions remain human-owned. |
+| 0:00-4:00 | Use the SE agent with WorkIQ, Slack, and GitHub context to prepare for the current Copilot 101 session. |
+| 4:00-7:00 | Enter the Universe Explorer project and inspect the current application, data, tests, workflows, and missing feature. |
+| 7:00-11:00 | Explain repository instructions, the Universe Guide agent, the reusable skill, and connected tools. |
+| 11:00-14:00 | Plan the announcement-comparison feature and approve a bounded implementation. |
+| 14:00-20:00 | Implement and validate locally, or switch to the completed checkpoint. |
+| 20:00-24:00 | Review the rendered result in a browser canvas and make one focused correction. |
+| 24:00-27:00 | Inspect the code, tests, sources, and diff in VS Code. |
+| 27:00-29:00 | Show Actions evidence and delegate a bounded cloud follow-up. |
+
+The exact prompts, narration, transitions, cutoffs, and closing script are in [`demo-session-plan.md`](demo-session-plan.md).
+
+## Condensed fallback: prepared Universe Explorer artifact
+
+Use the following shorter sequence only when the full implementation path is not appropriate for the room or environment.
 
 ### Prepared artifact walkthrough
 
@@ -61,7 +72,7 @@ Select the purpose-specific custom agent, such as **Universe Guide**, and run th
 ### Live prompt
 
 ```text
-Find today's GitHub Orientation session. What is its purpose, what should I prepare, and what connected meeting, document, Slack, and GitHub context would help me participate?
+Help me prepare for the Copilot 101 session I am delivering today. What is its purpose, who is the audience, what should I prepare, and what connected meeting, document, Slack, and GitHub context is current?
 
 Link the sources. Separate sourced facts from your interpretation. For important claims, show the source and date. Tell me what you could not access, where sources conflict, and what still needs a human answer.
 ```
@@ -205,7 +216,7 @@ Before the session:
 
 - Confirm the custom agent, repository instructions, reusable skill, and MCP/plugin documentation are already created and commented.
 - Confirm the agent can be selected and has only the intended tools and connections.
-- Keep a saved Universe Explorer result and expected draft artifact open as the first recovery path.
+- Keep the saved connected-context answer, `demo-complete` checkpoint, browser screenshot, saved test output, and pinned successful Actions run ready as recovery paths.
 - Authenticate and open every required surface.
 - Hide notifications and unrelated tabs.
 - Increase terminal and browser text size.

@@ -1,14 +1,18 @@
 # GitHub Copilot 101 session script
 
-This is the facilitator talk track for the Pages deck. The presentation itself contains no audience-calibration questions.
+This is the facilitator talk track for the Pages deck. The presentation itself contains no audience-calibration questions. Use [`demo-session-plan.md`](demo-session-plan.md) as the canonical minute-by-minute presentation and live-demo script.
 
 ## Session plan
 
 | Time | Part | Outcome |
 | --- | --- | --- |
-| 0:00–0:08 | Main opening slides | Explain the shift in Copilot, the assistant/agent/platform frame, surfaces, and the control loop. |
-| 0:08–0:37 | Live demonstration | Inspect prepared customization, select the pre-created agent, run the Universe Explorer task, and review the result. |
-| 0:37–0:45 | Questions and close | Answer useful questions, use appendix references when helpful, or finish early. |
+| 0:00–0:08 | Main opening slides | Explain the shift in Copilot, the assistant/agent/platform frame, the multi-model/multi-surface/multi-agent system, and the available surfaces. |
+| 0:08–0:12 | Workplace grounding | Select the SE agent and use WorkIQ, Slack, and GitHub context to prepare for the Copilot 101 session. |
+| 0:12–0:19 | Project and customization | Enter the Universe Explorer project and inspect the repository, instructions, custom agent, skill, and connections. |
+| 0:19–0:28 | Plan and implement | Use the Universe Guide agent to plan and implement the announcement-comparison feature in the local repository. |
+| 0:28–0:35 | Visual and code review | Review the result in a browser canvas, make one focused correction, and inspect the code and diff in VS Code. |
+| 0:35–0:37 | GitHub continuation | Show Actions evidence and delegate a bounded cloud follow-up without waiting for it. |
+| 0:37–0:45 | Questions | Answer useful questions, use appendix references when helpful, or finish early. |
 
 ## Questions for the room
 
@@ -59,7 +63,21 @@ Say:
 
 > The level of autonomy changes. Accountability does not. We still own the goal, the review, and the final action.
 
-### Slide 4 — One Copilot. Different surfaces for different work
+### Slide 4 — Multi-model. Multi-surface. Multi-agent.
+
+Say:
+
+> Copilot is no longer one model, one interface, or one general-purpose agent.
+
+> Multi-model means I can select or route among enabled models and choose the effort appropriate to the task.
+
+> Multi-surface means the same work can move among the Copilot app, IDE, CLI, GitHub.com, and mobile as the strongest context and review surface changes.
+
+> Multi-agent means I can use specialized agents for different outcomes, and coordinate bounded work across sessions and workflows.
+
+> I will expand on surfaces next because choosing the right place to work is one of the most practical decisions in day-to-day use.
+
+### Slide 5 — One Copilot. Different surfaces for different work
 
 Say:
 
@@ -73,27 +91,37 @@ Say:
 
 Source: [GitHub Copilot in VS Code Universe releases — 28 October 2026](https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases) · [Backing issue](https://github.com/abirismyname/github-changelog-reader/issues/1414)
 
-### Slide 5 — Start with a real question. Keep the evidence visible
+### Slide 6 — DEMO
 
 Say:
 
-> Start with the real question, not the name of a feature.
+> We have covered the platform at a high level. Now I will show how these pieces connect in normal day-to-day work.
 
-> Retrieve the smallest useful context. Turn it into an observable action. Keep the evidence visible: sources, checks, or a diff. Then make a deliberate decision to publish, delegate, ask a human, or stop.
-
-> A useful prompt is a lightweight contract. State the scope, observable outcome, important boundaries, verification evidence, and any approval point.
-
-Example:
-
-> Inspect the report command and its tests. Plan the smallest change that adds CSV output while preserving the JSON default and public API. Add no dependency. Wait for approval before editing. Verify with targeted tests and summarize remaining risk.
-
-> I will repeat this loop during the demonstration. Before the task starts, I will also show the prepared agent, repository instructions, reusable skill, and connections that shape how the work is done.
+> I will begin with my SE agent and connected workplace context, then move into the Universe Explorer repository, use a specialized repository agent, implement a bounded change, and review the result across several surfaces.
 
 ## Live demonstration
 
-The 29-minute demo begins with a short inspection of prepared customization. It then selects the pre-created custom agent for the Universe Explorer task, validates the evidence, turns the result into a GitHub-shaped artifact, and reviews it.
+The default demonstration is the complete day-to-day workflow in [`demo-session-plan.md`](demo-session-plan.md):
 
-### Demo setup
+```text
+Copilot 101 workplace question
+  → SE agent
+  → WorkIQ, Slack, and GitHub evidence
+  → Universe Explorer project
+  → repository instructions, Universe Guide agent, skill, and connections
+  → approved plan
+  → local implementation
+  → browser-canvas review
+  → VS Code diff review
+  → GitHub Actions evidence
+  → bounded cloud follow-up
+```
+
+The first four minutes ground the demonstration in normal work by asking the SE agent to prepare for the current Copilot 101 session using permission-appropriate WorkIQ, Slack, and GitHub context. The remaining time shows how that grounded outcome becomes a complete repository workflow in Universe Explorer.
+
+The condensed artifact-generation sequence below is a fallback for a room or environment where the full implementation path is not appropriate. It is not the default run of show.
+
+### Condensed fallback demo setup
 
 Before the session:
 
@@ -106,16 +134,8 @@ Before the session:
 - Open the three fallback files under `demo-assets/`.
 - Hide notifications and unrelated workplace content.
 - Use a purpose-built repository if you plan to publish anything.
-- Keep the issue draft unpublished during the default demo.
+- Keep any issue draft unpublished during this condensed fallback.
 - Do not create or configure the custom agent, skill, plugin, MCP connection, or repository instructions live.
-
-### Slide 6 — Live demo
-
-Say:
-
-> We have covered the pieces separately. I will now leave the deck and connect them in a live workflow.
-
-> First I will show the customization that was prepared before the session. Then I will select the prepared agent and use it for the Universe Explorer task. The detailed checkpoints, approval boundaries, and fallback paths are in this facilitator script and the demo guide.
 
 ### Inspect the prepared customization
 
@@ -270,11 +290,9 @@ Say:
 
 > Copilot helped retrieve context, synthesize it, and produce a GitHub-shaped next step. The human work was selecting the outcome, checking the sources, preserving the privacy boundary, and deciding whether the result was ready to publish.
 
-## Questions and close
+## Questions
 
-### Slide 7 — Questions and close
-
-Use the final slide for questions. Seed only if needed:
+Return to the conversation or remain on the demo result. There is no separate closing slide. Seed only if needed:
 
 - When should I use Plan instead of Agent?
 - Why can different Copilot surfaces return different answers?
@@ -288,13 +306,13 @@ For availability, policy, privacy, retention, and model questions, use current o
 ## Appendix/reference talk tracks
 
 
-These slides follow the close and are not part of the default 45-minute spoken sequence. Press `A` to jump to the appendix when a question benefits from a visual explanation.
+These slides are not part of the default 45-minute spoken sequence. Press `A` to jump to the appendix when a question benefits from a visual explanation.
 
 ### Appendix 1 — Appendix guide
 
 Say:
 
-> The main run is eight minutes of opening slides, 29 minutes of live demonstration, and eight minutes for questions and close.
+> The main run is eight minutes of opening slides, 29 minutes of live demonstration, and eight minutes for questions.
 
 > These remaining slides are reference material. I will use them only when a question benefits from a visual explanation.
 

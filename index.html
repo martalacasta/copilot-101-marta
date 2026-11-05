@@ -30,13 +30,13 @@
         <div class="slide-inner cover-layout">
           <div class="eyebrow"><span class="pulse-dot"></span> New Hubber session</div>
           <div>
-            <p class="terminal-kicker" aria-hidden="true">$ copilot learn --then-do</p>
             <h1 id="slide-1-title">GitHub<br><span class="gradient-text">Copilot 101</span></h1>
-            <p class="hero-subtitle">First, understand the platform. Then, watch it move grounded context into useful GitHub work.</p>
+            <p class="hero-subtitle">Copilot helps all of us understand, create, and move work forward—whatever our role.</p>
           </div>
           <div class="cover-footer">
             <div>
               <p class="presenter-name">Marta Lacasta</p>
+              <p class="presenter-role">Solutions Engineer</p>
               <p>Short foundation + prepared end-to-end demo</p>
             </div>
             <div class="cover-chip">45 minutes</div>
@@ -44,7 +44,7 @@
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
           <strong>Timing: 1 minute</strong>
-          <p>Set the 45-minute contract: eight minutes of framing, a 29-minute live demonstration, then eight minutes for questions and close. Ask at most one quick room-calibration question while this slide is visible.</p>
+          <p>Introduce Marta as a Solutions Engineer. Set the 45-minute contract: eight minutes of framing, a 29-minute live demonstration, then eight minutes for questions. Ask at most one quick room-calibration question while this slide is visible.</p>
         </aside>
       </section>
 
@@ -84,10 +84,35 @@
         </aside>
       </section>
 
-      <section class="slide" id="slide-4" data-title="Surfaces" data-duration="2 min" data-section="main" tabindex="-1" aria-labelledby="slide-4-title">
+      <section class="slide dimension-slide" id="slide-4" data-title="Multi-model, multi-surface, multi-agent" data-duration="1.5 min" data-section="main" tabindex="-1" aria-labelledby="slide-4-title">
+        <div class="slide-inner">
+          <div class="section-label">Opening / How Copilot scales</div>
+          <div class="dimension-heading">
+            <h2 id="slide-4-title">Multi-model.<br>Multi-surface.<br>Multi-agent.</h2>
+            <div class="copilot-mark" aria-label="GitHub Copilot">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M47.801 34.003c-1.72 2.988-11.706 10.037-23.82 10.037S1.881 36.991.161 34.003a1.309 1.309 0 0 1-.161-.57v-5.615c.012-.17.047-.338.11-.498.744-1.867 2.692-4.58 5.206-5.308.333-.855.826-2.106 1.287-3.029a20.112 20.112 0 0 1-.104-2.171c0-2.659.563-4.992 2.262-6.729.793-.811 1.777-1.433 2.945-1.901C14.502 5.911 18.483 4 23.938 4c5.455 0 9.523 1.911 12.319 4.182 1.167.468 2.151 1.09 2.944 1.901 1.699 1.737 2.263 4.07 2.263 6.729 0 .736-.027 1.465-.105 2.171.461.923.954 2.174 1.288 3.029 2.513.728 4.461 3.441 5.205 5.308.081.205.115.424.115.645v5.318c0 .252-.04.502-.166.72ZM24.325 22.031h-.688a8.52 8.52 0 0 1-.709 1.016c-1.537 1.892-3.833 2.98-7.008 2.98-3.447 0-5.972-.717-7.557-2.514a4.408 4.408 0 0 1-.171-.21l-.195.21v13.155c2.867 1.558 9.02 4.353 15.984 4.353s13.117-2.795 15.984-4.353V23.513l-.195-.21s-.066.091-.171.21c-1.584 1.797-4.11 2.514-7.557 2.514-3.175 0-5.47-1.088-7.008-2.98a8.637 8.637 0 0 1-.709-1.016h-.033.033Zm-1.969-5.864a14.31 14.31 0 0 0 .127-1.785v-.042c-.003-1.537-.339-2.538-.876-3.152-.681-.78-2.09-1.378-5.06-1.057-3.008.326-4.69 1.073-5.643 2.048-.923.944-1.408 2.356-1.408 4.633 0 2.42.348 3.849 1.115 4.719.729.827 2.165 1.499 5.309 1.499 2.417 0 3.799-.786 4.683-1.873.948-1.168 1.482-2.878 1.753-4.99Zm3.25 0c.271 2.112.805 3.822 1.754 4.99.883 1.087 2.265 1.873 4.682 1.873 3.145 0 4.58-.672 5.309-1.499.767-.87 1.116-2.299 1.116-4.719 0-2.277-.485-3.689-1.408-4.633-.954-.975-2.635-1.722-5.644-2.048-2.969-.321-4.378.277-5.06 1.057-.537.614-.873 1.615-.876 3.152v.042c.002.53.042 1.123.127 1.785Z"/>
+                <path d="M28.998 28.516c1.104 0 1.999.895 1.999 1.999v3.998a2 2 0 1 1-3.998 0v-3.998c0-1.104.895-1.999 1.999-1.999Zm-9.996 0c1.104 0 1.999.895 1.999 1.999v3.998a2 2 0 1 1-3.998 0v-3.998c0-1.104.895-1.999 1.999-1.999Z"/>
+              </svg>
+              <span>GitHub Copilot</span>
+            </div>
+          </div>
+          <div class="definition-columns dimension-columns">
+            <article><span>MULTI-MODEL</span><h3>Choose or route the right intelligence</h3><p>Match the model and effort to the task, or let Copilot orchestrate enabled models.</p></article>
+            <article><span>MULTI-SURFACE</span><h3>Work where the context is strongest</h3><p>Move among the app, IDE, CLI, GitHub.com, and mobile as the work changes.</p></article>
+            <article><span>MULTI-AGENT</span><h3>Use specialists for different outcomes</h3><p>Select purpose-specific agents and coordinate bounded work across sessions and workflows.</p></article>
+          </div>
+        </div>
+        <aside class="speaker-notes" aria-label="Speaker notes">
+          <strong>Timing: 1.5 minutes</strong>
+          <p>Introduce the three dimensions without expanding every feature. Models provide different capabilities, surfaces place Copilot where the work is easiest to understand and review, and agents provide specialized roles and bounded execution. Use the next slide to expand specifically on surfaces.</p>
+        </aside>
+      </section>
+
+      <section class="slide" id="slide-5" data-title="Surfaces" data-duration="2 min" data-section="main" tabindex="-1" aria-labelledby="slide-5-title">
         <div class="slide-inner">
           <div class="section-label">Opening / Where it lives</div>
-          <h2 id="slide-4-title">One Copilot. Different surfaces for different work.</h2>
+          <h2 id="slide-5-title">One Copilot. Different surfaces for different work.</h2>
           <div class="surface-showcase">
             <div class="surface-list">
               <article><span>IDE</span><p>Completions, chat, plan, agents, tests, review, and local tools.</p></article>
@@ -108,70 +133,14 @@
         </aside>
       </section>
 
-      <section class="slide" id="slide-5" data-title="How to work with Copilot" data-duration="1.5 min" data-section="main" tabindex="-1" aria-labelledby="slide-5-title">
-        <div class="slide-inner">
-          <div class="section-label">Opening / Demo control loop</div>
-          <h2 id="slide-5-title">Start with a real question. Keep the evidence visible.</h2>
-          <ol class="workflow-line" aria-label="Question to next step workflow">
-            <li><span>01</span><strong>Question</strong><small>State the outcome</small></li>
-            <li><span>02</span><strong>Context</strong><small>Retrieve useful sources</small></li>
-            <li><span>03</span><strong>Action</strong><small>Draft, change, review, or task</small></li>
-            <li><span>04</span><strong>Evidence</strong><small>Sources, checks, and diff</small></li>
-            <li><span>05</span><strong>Decision</strong><small>Publish, delegate, ask, or stop</small></li>
-          </ol>
-          <div class="prompt-contract">
-            <span>Prompt contract</span>
-            <code>Inspect [scope]. Produce [outcome]. Preserve [boundaries]. Verify with [evidence]. Stop before [approval point].</code>
-          </div>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 1.5 minutes</strong>
-          <p>Repeat this workflow during the demo. Before running the task, inspect the prepared custom agent, repository instructions, reusable skill, and documented MCP or plugin connections. The prompt contract makes the finish line checkable: scope, outcome, boundaries, evidence, and an approval point.</p>
-        </aside>
-      </section>
-
-      <section class="slide demo-title-slide" id="slide-6" data-title="Live demo" data-duration="29 min" data-section="main" tabindex="-1" aria-labelledby="slide-6-title">
+      <section class="slide demo-title-slide" id="slide-6" data-title="Demo" data-duration="29 min" data-section="main" tabindex="-1" aria-labelledby="slide-6-title">
         <div class="slide-inner">
           <div class="section-label">Main / Live demonstration</div>
-          <h2 id="slide-6-title">Now use the system.</h2>
-          <p>Prepared agent → comparison feature → canvas review → evidence</p>
+          <h2 id="slide-6-title">DEMO</h2>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
           <strong>Timing: 29 minutes</strong>
-          <p>Use about one minute to transition out of the deck, then run the prepared Universe Explorer demonstration. Show the custom agent, repository instructions, reusable skill, and documented connections before selecting the Universe Guide agent. Plan and implement the bounded announcement-comparison feature, inspect the rendered result in a browser canvas, review the code and checks, and stop before merge or deployment. Do not create or configure the agent live.</p>
-        </aside>
-      </section>
-
-      <section class="slide closing-slide" id="slide-7" data-title="Questions and close" data-duration="8 min" data-section="main" tabindex="-1" aria-labelledby="slide-7-title">
-        <div class="slide-inner resources-slide">
-          <div class="section-label">Close / Questions + resources</div>
-          <div class="resources-layout">
-            <div>
-              <h2 id="slide-7-title">Start with one real question and one source you can inspect.</h2>
-              <p class="resource-intro">Question → context → action → review → next step</p>
-              <div class="resource-links compact" aria-label="Copilot resources">
-                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-101.md">Participant overview</a>
-                <a href="https://github.com/github/onboarding/blob/main/new-hubbers/week-1/copilot-at-github-companion-guide.md">Companion guide</a>
-                <a href="https://docs.github.com/en/copilot">GitHub Copilot docs</a>
-                <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix">Feature matrix</a>
-                <a href="https://github.blog/changelog/label/copilot/">Copilot changelog</a>
-                <a href="https://github.com/trust-center">Trust Center</a>
-              </div>
-            </div>
-            <div class="closing-mark" aria-hidden="true">
-              <span class="orbit orbit-one"></span>
-              <span class="orbit orbit-two"></span>
-              <span class="core">YOU</span>
-            </div>
-          </div>
-          <div class="closing-footer">
-            <p><strong>Thank you.</strong> Marta Lacasta</p>
-            <p>martalacasta.github.io/copilot-101-marta</p>
-          </div>
-        </div>
-        <aside class="speaker-notes" aria-label="Speaker notes">
-          <strong>Timing: 8 minutes</strong>
-          <p>Use this time for questions, current setup resources, and one practical next step. Appendix slides follow this close but are not part of the normal spoken sequence. Finish early when the session outcomes are met.</p>
+          <p>Run the connected 29-minute demonstration from demo-session-plan.md. Begin with the SE agent and permission-appropriate WorkIQ, Slack, and GitHub context for the current Copilot 101 session. Then enter Universe Explorer, inspect its repository instructions, Universe Guide agent, skill, connections, data, tests, workflows, and checkpoints; plan and implement the announcement-comparison feature; review it in a browser canvas and VS Code; show Actions evidence; and delegate a bounded cloud follow-up. Do not configure agents or connections live, and stop before merge or deployment.</p>
         </aside>
       </section>
 
@@ -183,7 +152,7 @@
             <article>
               <span>MAIN RUN · 45 MIN</span>
               <h3>8 + 29 + 8</h3>
-              <p>Short opening, live demonstration, then questions and close.</p>
+              <p>Short opening, live demonstration, then questions.</p>
             </article>
             <article>
               <span>REFERENCE ONLY</span>
@@ -191,7 +160,7 @@
               <p>Models, autonomy, agents, workflows, MCP, skills, new capabilities, use cases, and guardrails.</p>
             </article>
           </div>
-          <p class="callout subtle"><strong>Presenter shortcut:</strong> press <kbd>A</kbd> to jump here. Press <kbd>Home</kbd> or <kbd>End</kbd> to return to the main opening or close.</p>
+          <p class="callout subtle"><strong>Presenter shortcut:</strong> press <kbd>A</kbd> to jump here. Press <kbd>Home</kbd> for the cover or <kbd>End</kbd> for the DEMO slide.</p>
         </div>
         <aside class="speaker-notes" aria-label="Speaker notes">
           <strong>Reference only</strong>
@@ -394,7 +363,7 @@
     </nav>
 
     <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
-    <div id="shortcut-hint" class="shortcut-hint">Arrows navigate · N notes · A appendix · End main close</div>
+    <div id="shortcut-hint" class="shortcut-hint">Arrows navigate · N notes · A appendix · End DEMO</div>
     <div id="live-announcer" class="sr-only" aria-live="polite"></div>
     <noscript><p class="noscript-message">JavaScript is disabled. All slides are shown in document order.</p></noscript>
   </body>

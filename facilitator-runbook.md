@@ -10,25 +10,27 @@ This is a 45-minute session for new Hubbers with basic GitHub familiarity. It ha
 
 | Time | Segment | Facilitator outcome |
 | --- | --- | --- |
-| 0:00–0:08 | Opening slides | Cover Copilot's evolution, the assistant/agent/platform frame, surfaces, and the evidence-visible control loop. |
-| 0:08–0:09 | Demo transition | Leave the deck and open the prepared Universe Explorer repository. |
-| 0:09–0:12 | Prepared customization | Inspect the pre-created custom agent, repository instructions, reusable skill, and connection documentation. |
-| 0:12–0:21 | Universe Explorer task | Select the prepared agent, run the checked-in task, and validate sources, dates, and access gaps. |
-| 0:21–0:30 | Draft artifact | Turn the validated result into the repository's documented draft artifact without publishing. |
-| 0:30–0:35 | Review | Challenge claims, source quality, boundaries, and acceptance criteria. |
-| 0:35–0:37 | Demo close | Reinforce what configuration controlled and which decisions remain human-owned. |
+| 0:00–0:08 | Opening slides | Cover Copilot's evolution, the assistant/agent/platform frame, multi-model/multi-surface/multi-agent, the surface expansion, and the demo transition. |
+| 0:08–0:12 | Ground in today's work | Select the SE agent and use WorkIQ, Slack, and GitHub context to prepare for the current Copilot 101 session. |
+| 0:12–0:15 | Enter the project | Move from the grounded work question into the prepared Universe Explorer repository. |
+| 0:15–0:19 | Prepared customization | Inspect repository instructions, the Universe Guide agent, the reusable skill, and connection documentation. |
+| 0:19–0:22 | Plan | Agree on a bounded announcement-comparison implementation plan and approval point. |
+| 0:22–0:28 | Implement | Make and validate the scoped change locally, or switch to the completed checkpoint. |
+| 0:28–0:32 | Visual review | Inspect the rendered result in a browser canvas and make one focused correction. |
+| 0:32–0:35 | Code review | Continue in VS Code to inspect the diff, tests, sources, and remaining risks. |
+| 0:35–0:37 | GitHub continuation | Show Actions evidence and delegate a bounded cloud follow-up without waiting. |
 | 0:37–0:45 | Questions and resources | Answer useful questions, use appendix slides when helpful, or finish early. |
 
 ## Demo selection
 
-Use the prepared **Universe Explorer** workflow as the default. The selected custom agent and supporting configuration must already exist: show how they are defined, select the agent, run the checked-in task, create the documented draft artifact, and review it. Use orientation and conversation-to-contribution only as permission-safe fallbacks. For a strongly technical room, use the repository control loop as an appendix-led follow-up rather than replacing the default 45-minute flow.
+Use the connected **SE agent → Universe Explorer** workflow as the default. Begin with the current Copilot 101 session as a normal workplace question, using permission-appropriate WorkIQ, Slack, and GitHub context. Then move into the prepared repository and show the complete day-to-day control loop: understand, inspect customization, plan, implement, visually review, inspect the diff, check Actions evidence, and delegate a bounded follow-up. Use the saved connected-context result, completed checkpoint, and screenshots as the first recovery paths.
 
 | Room | Demo emphasis |
 | --- | --- |
-| Mostly nontechnical or mixed | Standard Universe Explorer demo with extra narration of agent role, instructions, and sources |
-| Highly technical | Standard demo; use Ask → Plan → Agent → Review only after the close if time is explicitly extended |
-| Experienced operational audience | Standard demo; discuss workflows or automation from the appendix during Q&A |
-| Significant setup gaps | Saved Universe Explorer output, then the permission-safe local fallbacks |
+| Mostly nontechnical or mixed | Keep the complete story but spend less time in code; use the prepared checkpoint sooner and emphasize agents, sources, review, and boundaries |
+| Highly technical | Show the full plan, implementation, canvas, VS Code, Actions, and cloud sequence |
+| Experienced operational audience | Emphasize connected context, projects, workflows, Actions evidence, and asynchronous follow-up |
+| Significant setup gaps | Use the saved connected-context result, completed checkpoint, screenshot, and pinned Actions run |
 
 ## Preparation checklist
 

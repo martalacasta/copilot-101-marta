@@ -1,6 +1,6 @@
 # Copilot at GitHub: From Context to Contribution
 
-A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 45-minute Copilot session for new Hubbers. The normal spoken sequence is a short five-slide opening, a live end-to-end demonstration, and a concise questions-and-close slide. Deeper product material remains available after the close as a clearly labeled appendix.
+A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 45-minute Copilot session for new Hubbers. The normal spoken sequence is a short five-slide opening, a dedicated demo transition slide, a live end-to-end demonstration, and questions without a separate closing slide. Deeper product material remains available as a clearly labeled appendix.
 
 **View the deck:** <https://martalacasta.github.io/copilot-101-marta/>
 
@@ -8,13 +8,13 @@ A dependency-free, Pages-hosted workshop kit for Marta Lacasta's 45-minute Copil
 
 | Segment | Time | Focus |
 | --- | ---: | --- |
-| Opening slides | 8 min | Copilot evolution, assistant/agent/platform, surfaces, and the evidence-visible control loop |
-| End-to-end demo | 29 min | Inspect prepared customization, select the pre-created custom agent, use connected context, produce an artifact, and review it |
-| Questions + close | 8 min | Resources, current setup pointers, appendix references, or time back |
+| Opening slides | 8 min | Copilot evolution, assistant/agent/platform, multi-model/multi-surface/multi-agent, and the surface expansion |
+| End-to-end demo | 29 min | Use the SE agent with WorkIQ, Slack, and GitHub context, then carry the outcome through the complete Universe Explorer repository workflow |
+| Questions | 8 min | Current setup pointers, appendix references, or time back |
 
-The common flow is **Question → grounded context → GitHub action → review → next step**. The custom agent, repository instructions, reusable skill, and connection documentation are prepared before the session; the live demo inspects and uses them rather than creating them.
+The common flow is **Question → SE agent → connected evidence → project → specialized repository agent → plan → implementation → visual and code review → Actions evidence → bounded follow-up**. The agents, repository instructions, reusable skill, connections, checkpoints, and workflows are prepared before the session; the live demo inspects and uses them rather than creating them.
 
-The main deck is **7 slides**. The remaining **9 slides** are reference material after the close: appendix guide, models/Fusion, autonomy, agents/workflows, MCP, skills/customization, what is new, use cases, and guardrails.
+The main deck is **6 slides**. The remaining **9 slides** are reference material: appendix guide, models/Fusion, autonomy, agents/workflows, MCP, skills/customization, what is new, use cases, and guardrails.
 
 ## Local preview
 
@@ -35,7 +35,7 @@ Open <http://localhost:8000>. You can also open `index.html` directly in a brows
 | `ArrowRight`, `ArrowDown`, `Space`, `PageDown` | Next slide |
 | `ArrowLeft`, `ArrowUp`, `Shift+Space`, `PageUp` | Previous slide |
 | `Home` | First slide |
-| `End` | Main close slide |
+| `End` | DEMO slide |
 | `Shift+End` | Last appendix slide |
 | `A` | First appendix slide |
 | `N` | Toggle speaker notes |
@@ -47,10 +47,10 @@ Scroll vertically with a mouse, trackpad, or touch. The deck snaps gently to eac
 - Presenter notes are embedded in every slide and hidden by default. Press `N` to show or hide them.
 - Use the browser's print dialog to export a landscape PDF with one slide per page.
 - Turn notes on before printing if you want a notes overlay included in the PDF.
-- See [`session-script.md`](session-script.md) for the room questions, slide talk track, transitions, exact demo script, and current release sources.
+- See [`session-script.md`](session-script.md) for room questions, the concise slide talk track, and the condensed fallback.
 - See [`facilitator-runbook.md`](facilitator-runbook.md) for preparation and delivery logistics.
 - See [`demo-guide.md`](demo-guide.md) for exact prompts, timeboxes, recovery paths, and demo selection.
-- See [`demo-session-plan.md`](demo-session-plan.md) for the connected 45-minute demo story, exact talk track, prompts, canvas checkpoint, transitions, and cutoffs.
+- See [`demo-session-plan.md`](demo-session-plan.md) for the canonical 45-minute presentation and demo script, including the SE-agent grounding, exact talk track, prompts, canvas checkpoint, transitions, and cutoffs.
 - See [`demo-repository-kickoff.md`](demo-repository-kickoff.md) for the reusable prompt that prepares the separate Universe Explorer demonstration repository.
 - Use [`demo-assets/`](demo-assets/) for permission-safe local fallbacks.
 
